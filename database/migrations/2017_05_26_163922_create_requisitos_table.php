@@ -16,8 +16,8 @@ class CreateRequisitosTable extends Migration
             $table->increments('id');
             $table->integer('id_tramite');
             $table->string('id_requisito_fundamento');
-            $table->integer('id_requisito_tipo');
-            $table->string('nombre');
+            $table->string('tipo');
+            $table->string('descripcion');
             $table->integer('original');
             $table->integer('copia');
         
