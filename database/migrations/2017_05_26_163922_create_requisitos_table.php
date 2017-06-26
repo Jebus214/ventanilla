@@ -15,7 +15,7 @@ class CreateRequisitosTable extends Migration
         Schema::create('requisitos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_tramite');
-            $table->string('id_requisito_fundamento');
+            $table->string('fundamento');
             $table->string('tipo');
             $table->string('descripcion');
             $table->integer('original');

@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('/admin',function(){
+  return view('admin/home');
+});
+
+
+Route::get('/admin/tramites',function(){
+  return view('admin/tramites');
+});
