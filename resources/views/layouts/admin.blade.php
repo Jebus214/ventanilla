@@ -74,23 +74,17 @@
 
     <div class="container">
         <div class="row">
-                <ul class="nav nav-tabs" role="tablist">
+                
 
-      <li role="presentation"><a href="#tramites" aria-controls="tramites" role="tab" data-toggle="tab">Tramites</a></li>
-      <li role="presentation"><a href="#requisitos" aria-controls="requisitos" >Requisitos</a></li>   
-      <li role="presentation"><a href="#documentos" aria-controls="documentos" >Docuentos a Obtener</a></li>
-      <li role="presentation"><a href="#oficinas" aria-controls="oficinas" >Oficinas</a></li>
-      <li role="presentation"><a href="#fundamento" aria-controls="fundamento" >Fundamento Legal</a></li>
-      <li role="presentation"><a href="#tiempos" aria-controls="tiempos" >Tiempo  y Costo</a></li>
-      <li role="presentation"><a href="#preguntas" aria-controls="preguntas" >Preguntas Frecuentes</a></li>
-  </ul>
 
-  <h3>Tramite</h3>
-<div class="tab-content">
+
+
   @yield('content')
   
 
-  </div>
+
+
+
    
         
         </div>

@@ -10,7 +10,7 @@ class Rubro extends Model
     protected $fillable = ['nombre'];
 
     public function tramite() {
-        return $this->belongsTo(Tramite::class);
+        return $this->hasMany(Tramite::class);
    }
 
 }
