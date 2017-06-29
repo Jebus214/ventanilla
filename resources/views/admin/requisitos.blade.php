@@ -2,25 +2,27 @@
       <div class="container">
         
       <div class="row">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
+
         <div class="col-md-2">
           <div class="form-group"> <label>Original</label>
-            <input type="email" class="form-control" placeholder="Original"> </div>
+            <input type="text" class="form-control" placeholder="Original"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Copias</label>
-            <input type="email" class="form-control" placeholder="Copias"> </div>
+            <input type="text" class="form-control" placeholder="Copias"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Fundamento legal</label>
-            <input type="email" class="form-control" placeholder="Fundamento Legal"> </div>
+            <input type="text" class="form-control" placeholder="Fundamento Legal"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Persona</label>
-            <input type="email" class="form-control" placeholder="Persona"> </div>
+            <input type="text" class="form-control" placeholder="Persona"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"><label>Agregar</label>
-            <a style="display:block" href="#" class="btn btn-primary">+</a>
+            <button style="display:block" href="#" class="btn btn-primary">+</button>
           </div>
         </div>
       </div>
