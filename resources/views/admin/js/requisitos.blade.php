@@ -14,18 +14,20 @@
 $(document).ready(function(){
 
 
-var tableId="dataTable";
-var tramiteId=$('#'+tableId).attr('data-tramiteId');
-var modalId="requisitosEditModal";
-var resourceName;
-
-function loadModalRequisitos(id){
 
 
-  var inputArray=$("#requisitosEditModal .form-group");
+
+function loadModalRequisitos(id,modalId,resourceName){
 
 
-  $.get( "/api/requisito/"+id, function( data ) {
+      console.log('test2:'+id);
+
+
+
+  var inputArray=$("#"+modalId+" .form-group");
+
+
+  $.get( "/api/"+resourceName+"/"+id, function( data ) {
 
 
     for (var i = 0; i < inputArray.length; i++) {
@@ -33,37 +35,44 @@ function loadModalRequisitos(id){
       var inputElement=$(inputArray[i].lastElementChild);
         console.log(inputElement.val(data[inputElement.attr('id')]));
             console.log(inputElement.val());
+            console.log(inputElement.attr('id'));
     }
 
 
   });
-
-
-
 }
 
-              $('.edit-button').click(function(e){
+
+
+function bindTable(tableId,tramiteId,modalId,resourceName,columnsArray){
+
+
+
+              $('.'+resourceName+'-edit-button').click(function(e){
 
                 e.preventDefault();
                 var button_reference=this;
                 var id=$(button_reference).attr('data-id');
-                loadModalRequisitos(id);
+                loadModalRequisitos(id,modalId,resourceName);
 
               });
 
   
 
 
-var columnsArray=[  {"data":"descripcion"},
-                    {"data":"original"},
-                    {"data":"copia"},
-                    {"data":"fundamento"},
-                    {"data":"tipo"},                  
-                    ];
 
 
 
+var editButtonColumnIndex=columnsArray.length;
 
+
+
+var deleteButtonColumnIndex=columnsArray.length + 1;
+
+
+
+console.log(editButtonColumnIndex);
+console.log(deleteButtonColumnIndex);
                     
 
 var myDataTable=$('#'+tableId).DataTable( {
@@ -92,7 +101,7 @@ var myDataTable=$('#'+tableId).DataTable( {
     }
   },
   ajax: {
-    url:  '/api/tramite/'+tramiteId+'/requisito/',
+    url:  '/api/tramite/'+tramiteId+'/'+resourceName+'/',
     dataSrc: ''
   },
   "columns": columnsArray,
@@ -102,14 +111,14 @@ var myDataTable=$('#'+tableId).DataTable( {
 
 
   {
-    "targets":5,
+    "targets":editButtonColumnIndex,
     "data": "id",
       "render": function ( data, type, full, meta ) {
         var status=data;
 
       
 
-          return '<a class="btn btn-primary edit-button" data-toggle="modal" data-target="#requisitosEditModal" data-id="'+data+'">Editar</a>'    
+          return '<a class="btn btn-primary '+resourceName+'-edit-button" data-toggle="modal" data-target="#'+modalId+'" data-id="'+data+'">Editar</a>'    
         
         
       
@@ -118,7 +127,7 @@ var myDataTable=$('#'+tableId).DataTable( {
 
   },
     {
-    "targets":6,
+    "targets":deleteButtonColumnIndex,
     "data": "id",
       "render": function ( data, type, full, meta ) {
        
@@ -141,26 +150,27 @@ var myDataTable=$('#'+tableId).DataTable( {
 
 
 
-$(tableId+' tbody').on( 'click', 'a.btn-primary', function () {
+$('#'+tableId+' tbody').on( 'click', 'a.btn-primary', function () {
             
               
     
     var id=$(this).attr('data-id');
-    console.log(id);
-    loadModalRequisitos(id);
+
+    console.log('test:'+id);
+    loadModalRequisitos(id,modalId,resourceName);
 
     } );
 
 
 
-$(tableId+' tbody').on( 'click', 'a.btn-danger', function () {
+$('#'+tableId+' tbody').on( 'click', 'a.btn-danger', function () {
             
               
     
-    var idRequisito=$(this).attr('data-id');
-    console.log(idRequisito);
+    var idResource=$(this).attr('data-id');
+    console.log(idResource);
     $.ajaxSetup({headers: {'X-CSRF-Token': $('#_token').val()}});
-                      $.post( "/api/delete/requisito/"+idRequisito,{id:idRequisito}).done(function(){
+                      $.post( "/api/delete/"+resourceName+"/"+idResource,{id:idResource}).done(function(){
                                 console.log('borrado:'+id);
                                 myDataTable.ajax.reload();
 
@@ -170,11 +180,11 @@ $(tableId+' tbody').on( 'click', 'a.btn-danger', function () {
 
 
 
-$('#save-requisito').click(function(e){
+$('#'+resourceName+'-save').click(function(e){
                 e.preventDefault();
 
 
-                var inputArray=$("#requisitosEditModal .form-group");
+                var inputArray=$("#"+modalId+" .form-group");
 
 
                 var formData={};
@@ -193,7 +203,7 @@ $('#save-requisito').click(function(e){
                       console.log(formData.id);
 
                       $.ajaxSetup({headers: {'X-CSRF-Token': $('#_token').val()}});
-                      $.post( "/api/requisito/"+formData.id,formData).done(function(){
+                      $.post( "/api/"+resourceName+"/"+formData.id,formData).done(function(){
                           loadModalRequisitos(formData.id);
                       });
 
@@ -205,11 +215,11 @@ $('#save-requisito').click(function(e){
               });
 
 
-$('#add-requisito').click(function(e){
+$('#'+resourceName+'-add').click(function(e){
                 e.preventDefault();
 
 
-                var inputArray=$(".form-group .requisitos-form");
+                var inputArray=$(".form-group ."+resourceName+"-form");
 
 
                 var formData={};
@@ -229,7 +239,7 @@ $('#add-requisito').click(function(e){
                       console.log(formData.id);
 
                       $.ajaxSetup({headers: {'X-CSRF-Token': $('#_token').val()}});
-                      $.post( "/api/add/tramite/"+tramiteId+"/requisito/",formData).done(function(){
+                      $.post( "/api/add/tramite/"+tramiteId+"/"+resourceName+"/",formData).done(function(){
                                         myDataTable.ajax.reload();
 
                       for (var i = 0; i < inputArray.length; i++) {
@@ -249,6 +259,40 @@ $('#add-requisito').click(function(e){
 
               });
 
+
+
+}
+
+
+
+
+bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitosEditModal","requisito",[  {"data":"descripcion"},
+                    {"data":"original"},
+                    {"data":"copia"},
+                    {"data":"fundamento"},
+                    {"data":"tipo"},                  
+                    ]);
+
+
+
+
+bindTable("OficinaTable",$('#OficinaTable').attr('data-tramiteId'),"oficinaEditModal","oficina",[
+                    {"data":"titular"},
+                    {"data":"oficina"},
+                    {"data":"calle"},
+                    {"data":"numint"},
+                    {"data":"numext"},
+                    {"data":"colonia"}, 
+                    {"data":"municipio"},                  
+                    {"data":"CP"},  
+                    {"data":"lada"},  
+                    {"data":"telefono"},  
+                    {"data":"extension"},
+                    {"data":"mail"}, 
+                    {"data":"horario"},     
+                  
+                  
+                    ]);
 
 });
 

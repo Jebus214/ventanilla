@@ -24,13 +24,18 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-
+//requisitos admin Routes
 Route::get('/api/requisito/{id}', 'Admin\TramiteAdminController@showRequisito');
 Route::get('/api/tramite/{id}/requisito', 'Admin\TramiteAdminController@showRequisitoByTramite');
 Route::post('/api/requisito/{id}', 'Admin\TramiteAdminController@editRequisito');
 Route::post('/api/delete/requisito/{id}', 'Admin\TramiteAdminController@deleteRequisito');
 Route::post('/api/add/tramite/{id}/requisito/', 'Admin\TramiteAdminController@addRequisito');
-
+//Oficinas admin Routes
+Route::get('/api/oficina/{id}', 'Admin\TramiteAdminController@showOficina');
+Route::get('/api/tramite/{id}/oficina', 'Admin\TramiteAdminController@showOficinaByTramite');
+Route::post('/api/oficina/{id}', 'Admin\TramiteAdminController@editOficina');
+Route::post('/api/delete/oficina/{id}', 'Admin\TramiteAdminController@deleteOficina');
+Route::post('/api/add/tramite/{id}/oficina/', 'Admin\TramiteAdminController@addOficina');
 
 
 

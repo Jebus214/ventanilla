@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="form-group"> <label>Descripción</label>
-            <input type="text" data-id="descripcion" class="form-control requisitos-form" placeholder="Descripción"> </div>
+            <input type="text" data-id="descripcion" class="form-control requisito-form" placeholder="Descripción"> </div>
         </div>
       </div>
 
@@ -18,23 +18,23 @@
         
         <div class="col-md-2">
           <div class="form-group"> <label>Original</label>
-            <input type="text" data-id="original" class="form-control requisitos-form" placeholder="Original"> </div>
+            <input type="text" data-id="original" class="form-control requisito-form" placeholder="Original"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Copias</label>
-            <input type="text" data-id="copias" class="form-control requisitos-form" placeholder="Copias"> </div>
+            <input type="text" data-id="copias" class="form-control requisito-form" placeholder="Copias"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Fundamento legal</label>
-            <input type="text" data-id="fundamento" class="form-control requisitos-form" placeholder="Fundamento Legal"> </div>
+            <input type="text" data-id="fundamento" class="form-control requisito-form" placeholder="Fundamento Legal"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Persona</label>
-            <input type="text" data-id="tipo" class="form-control requisitos-form" placeholder="Persona"> </div>
+            <input type="text" data-id="tipo" class="form-control requisito-form" placeholder="Persona"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"><label>Agregar</label>
-            <button id="add-requisito" style="display:block" href="#" class="btn btn-primary">+</button>
+            <button id="requisito-add" style="display:block" href="#" class="btn btn-primary">+</button>
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@
         </div>
         <div class="modal-footer">
           <a class="btn btn-default" data-dismiss="modal">Close</a>
-          <a id="save-requisito" class="btn btn-primary text-white">Guardar cambios</a>
+          <a id="requisito-save" class="btn btn-primary text-white">Guardar cambios</a>
         </div>
       </div>
     </div>

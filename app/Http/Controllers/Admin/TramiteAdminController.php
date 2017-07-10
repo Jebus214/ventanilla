@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Tramite;
+use App\Oficina;
 use App\Rubro;
 use App\Requisito;
 
@@ -81,5 +82,67 @@ class TramiteAdminController extends Controller
 				  	return response()->json($requisito);
 
 				}
+
+
+				////////////////////////////////////////////////////////////////////////////////
+				////Oficinas API
+				//
+				//
+				/////////////////////////////////////////////////////////////////////////////7/
+
+				public function addOficina(Request $request, $id)
+	     {
+
+
+
+	       $tramite=Tramite::findOrFail($id);
+
+	         	$tramite->oficina()->save(Oficina::create($request->all()));
+	 				return response()->json(['data'=>$request,'mensaje'=>'added']);
+
+	     }
+
+
+	 			public function editOficina(Request $request,$id)
+	 			{
+
+
+	 //      $requisito=Oficina::findOrFail($request->input('id'))->update($request->all());
+	 			$oficina=Oficina::findOrFail($id)->update($request->all());
+
+
+	 			return response()->json(['data'=>$oficina,'mensaje'=>'edited']);
+
+	     }
+
+	     public function deleteOficina(Request $request, $id)
+	     {
+
+	     		  $oficina=Oficina::findOrFail($id)->delete();;
+
+	          return response()->json(['data'=>$request,'mensaje'=>'deleted']);
+
+	     }
+
+
+	 		public function showOficina($id)
+	  		{
+	 		 //
+	 		  $oficina=Oficina::findOrFail($id);
+	 		  return response()->json($oficina);
+
+	 		}
+
+	 				public function showOficinaByTramite($id)
+	 		 		{
+	 				 //
+	 				    $tramite=Tramite::with('oficina')->findOrFail($id);
+	 						$oficina=$tramite->oficina()->get();
+	 				  	return response()->json($oficina);
+
+	 				}
+
+
+				///////////////////////////////////////////////////////////////////////////////////
 
 }
