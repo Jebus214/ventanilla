@@ -37,6 +37,13 @@ Route::post('/api/oficina/{id}', 'Admin\TramiteAdminController@editOficina');
 Route::post('/api/delete/oficina/{id}', 'Admin\TramiteAdminController@deleteOficina');
 Route::post('/api/add/tramite/{id}/oficina/', 'Admin\TramiteAdminController@addOficina');
 
+//Pregunta admin Routes
+Route::get('/api/pregunta/{id}', 'Admin\TramiteAdminController@showPregunta');
+Route::get('/api/tramite/{id}/pregunta', 'Admin\TramiteAdminController@showPreguntaByTramite');
+Route::post('/api/pregunta/{id}', 'Admin\TramiteAdminController@editPregunta');
+Route::post('/api/delete/pregunta/{id}', 'Admin\TramiteAdminController@deletePregunta');
+Route::post('/api/add/tramite/{id}/pregunta/', 'Admin\TramiteAdminController@addPregunta');
+
 
 
 

@@ -9,6 +9,8 @@ use App\Tramite;
 use App\Oficina;
 use App\Rubro;
 use App\Requisito;
+use App\Pregunta;
+
 
 class TramiteAdminController extends Controller
 {
@@ -144,5 +146,71 @@ class TramiteAdminController extends Controller
 
 
 				///////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+								////////////////////////////////////////////////////////////////////////////////
+								////Pregunta API
+								//
+								//
+								/////////////////////////////////////////////////////////////////////////////7/
+
+								public function addPregunta(Request $request, $id)
+					     {
+
+
+
+					       $tramite=Tramite::findOrFail($id);
+
+					         	$tramite->pregunta()->save(Pregunta::create($request->all()));
+					 				return response()->json(['data'=>$request,'mensaje'=>'added']);
+
+					     }
+
+
+					 			public function editPregunta(Request $request,$id)
+					 			{
+
+
+					 //      $requisito=Pregunta::findOrFail($request->input('id'))->update($request->all());
+					 			$pregunta=Pregunta::findOrFail($id)->update($request->all());
+
+
+					 			return response()->json(['data'=>$pregunta,'mensaje'=>'edited']);
+
+					     }
+
+					     public function deletePregunta(Request $request, $id)
+					     {
+
+					     		  $pregunta=Pregunta::findOrFail($id)->delete();;
+
+					          return response()->json(['data'=>$request,'mensaje'=>'deleted']);
+
+					     }
+
+
+					 		public function showPregunta($id)
+					  		{
+					 		 //
+					 		  $pregunta=Pregunta::findOrFail($id);
+					 		  return response()->json($pregunta);
+
+					 		}
+
+					 				public function showPreguntaByTramite($id)
+					 		 		{
+					 				 //
+					 				    $tramite=Tramite::with('oficina')->findOrFail($id);
+					 						$pregunta=$tramite->pregunta()->get();
+					 				  	return response()->json($pregunta);
+
+					 				}
+
+
+								///////////////////////////////////////////////////////////////////////////////////
 
 }

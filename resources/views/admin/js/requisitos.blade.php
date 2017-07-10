@@ -195,7 +195,6 @@ $('#'+resourceName+'-save').click(function(e){
                   var inputElement=$(inputArray[i].lastElementChild);
                       formData[inputElement.attr('id')]=inputElement.val();
 
-                    console.log(inputElement.val(data[inputElement.attr('id')]));
 
                 }
 
@@ -289,6 +288,16 @@ bindTable("OficinaTable",$('#OficinaTable').attr('data-tramiteId'),"oficinaEditM
                     {"data":"extension"},
                     {"data":"mail"}, 
                     {"data":"horario"},     
+                  
+                  
+                    ]);
+
+
+
+bindTable("preguntaTable",$('#preguntaTable').attr('data-tramiteId'),"preguntaEditModal","pregunta",[
+                    {"data":"pregunta"},
+                    {"data":"respuesta"},
+                
                   
                   
                     ]);

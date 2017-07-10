@@ -1,16 +1,15 @@
-<div role="tabpanel" class="tab-pane" id="preguntas">
+ <div role="tabpanel" class="tab-pane" id="preguntas">
   <div class="container">
 
     
     <div class="row">
       <div class="col-md-12">
-        <form class="">
           <div class="form-group"> <label>Pregunta</label>
-            <input type="email" class="form-control" placeholder="Pregunta"> </div>
+            <input data-id="pregunta" type="text" class="form-control pregunta-form" placeholder="Pregunta"> </div>
             <div class="form-group"> <label>Respuesta</label>
-              <input type="email" class="form-control" placeholder="Respuesta"> </div>
-            </form>
-            <a class="btn btn-primary" href="#">Agregar </a>
+              <input data-id="respuesta" type="text" class="form-control pregunta-form" placeholder="Respuesta"> </div>
+
+            <button id="pregunta-add" class="btn btn-primary" href="#">Agregar </button>
           </div>
         </div>
       </div>
@@ -18,36 +17,26 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>#</th>
+
+            <table data-tramiteId="{{$tramites->id}}" id="preguntaTable" class="cell-border" cellspacing="0"  style="width:100%">
+            <thead>
+              <tr>
+
                   <th>Pregunta </th>
                   <th>Respuesta</th>
                   <th>Editar</th>
                   <th>Borrar</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach ($tramites->pregunta as $pregunta)
-                <tr>
-                  <td>{{ $pregunta->id }} </td>
-                  <td>{{ $pregunta->pregunta }} </td>
-                  <td>{{ $pregunta->respuesta }} </td>
-                  <td>
-                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#editModal">Editar</a>
-                  </td>
-                  <td>
-                    <a href="#" class="btn btn-danger">Borrar</a>
-                  </td>
-                </tr>
-                       @endforeach
-              </tbody>
-            </table>
+               
+              </tr>
+            </thead>
+          
+ 
+          </table>
+
           </div>
         </div>
       </div>
-      <div class="modal" id="editModal">
+      <div class="modal" id="preguntaEditModal">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -57,21 +46,22 @@
             <div class="modal-body">
               <div class="row">
                 <div class="col-md-12">
-                  <form class="">
+              <div  class="form-group"> 
+                <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
 
-                    <div class="form-group"> <label>Pregunta</label>
-                      <input type="email" class="form-control" placeholder="Enter email"> </div>
+                      <div class="form-group"> <label>Pregunta</label>
+                        <input id="pregunta" type="text" class="form-control" placeholder="Pregunta"> </div>
                       <div class="form-group"> <label>Respuesta</label>
-                        <input type="email" class="form-control" placeholder="Enter email"> </div>
+                        <input id="respuesta" type="text" class="form-control" placeholder="Respuesta"> </div>
 
 
-                      </form>
+                
                     </div>
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <a class="btn btn-default" data-dismiss="modal">Close</a>
-                  <a class="btn btn-primary text-white">Save changes</a>
+                  <a class="btn btn-default" data-dismiss="modal">Cerrar</a>
+                  <a id="pregunta-save" class="btn btn-primary text-white">Guardar cambios</a>
                 </div>
               </div>
             </div>
