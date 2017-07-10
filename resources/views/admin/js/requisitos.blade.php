@@ -195,7 +195,7 @@ $('#'+resourceName+'-save').click(function(e){
                   var inputElement=$(inputArray[i].lastElementChild);
                       formData[inputElement.attr('id')]=inputElement.val();
 
-                    //console.log(inputElement.val(data[inputElement.attr('id')]));
+                    console.log(inputElement.val(data[inputElement.attr('id')]));
 
                 }
 
@@ -231,13 +231,12 @@ $('#'+resourceName+'-add').click(function(e){
 
                       formData[inputElement.attr('data-id')]=inputElement.val();
 
-                    //console.log(inputElement.val(data[inputElement.attr('id')]));
+                      console.log(inputElement[0]);
 
                 }
 
                       console.log(formData);
-                      console.log(formData.id);
-
+                      
                       $.ajaxSetup({headers: {'X-CSRF-Token': $('#_token').val()}});
                       $.post( "/api/add/tramite/"+tramiteId+"/"+resourceName+"/",formData).done(function(){
                                         myDataTable.ajax.reload();

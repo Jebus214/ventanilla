@@ -16,35 +16,35 @@
     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
             <div  class="form-group"> 
-                <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
+                <input data-id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
             <div class="form-group"> <label>Titular de la Oficina</label>
-              <input id="titular" type="text" class="form-control oficina-form" placeholder="Titular de la Oficina"> </div>
+              <input data-id="titular" type="text" class="form-control oficina-form" placeholder="Titular de la Oficina"> </div>
             <div class="form-group"> <label>Nombre de Oficina</label>
-              <input id="oficina" type="text" class="form-control oficina-form" placeholder="Nombre de Oficina"> </div>
+              <input data-id="oficina" type="text" class="form-control oficina-form" placeholder="Nombre de Oficina"> </div>
             <div class="form-group"> <label>Calle</label>
-              <input id="calle" type="text" class="form-control oficina-form" placeholder="Calle"> </div>
+              <input data-id="calle" type="text" class="form-control oficina-form" placeholder="Calle"> </div>
             <div class="form-group"> <label>No  Ext</label>
-              <input id="numext" type="text" class="form-control oficina-form" placeholder="No  Ext"> </div>
+              <input data-id="numext" type="text" class="form-control oficina-form" placeholder="No  Ext"> </div>
               <div class="form-group"> <label>No  Ext</label>
-              <input id="numint" type="text" class="form-control oficina-form" placeholder="No  Ext"> </div>
+              <input data-id="numint" type="text" class="form-control oficina-form" placeholder="No  Ext"> </div>
             <div class="form-group"> <label>Colonia</label>
-              <input id="colonia" type="text" class="form-control oficina-form" placeholder="Colonia"> </div>
+              <input data-id="colonia" type="text" class="form-control oficina-form" placeholder="Colonia"> </div>
             <div class="form-group"> <label>Municipio</label>
-              <input id="municipio" type="text" class="form-control oficina-form" placeholder="Municipio"> </div>
+              <input data-id="municipio" type="text" class="form-control oficina-form" placeholder="Municipio"> </div>
             <div class="form-group"> <label>CP</label>
-              <input id="CP" type="text" class="form-control oficina-form" placeholder="CP"> </div>
+              <input data-id="CP" type="text" class="form-control oficina-form" placeholder="CP"> </div>
             <div class="form-group"> <label>Lada</label>
-              <input id="lada" type="text" class="form-control oficina-form" placeholder="Lada"> </div>
+              <input data-id="lada" type="text" class="form-control oficina-form" placeholder="Lada"> </div>
             <div class="form-group"> <label>Teléfonos</label>
-              <input id="telefono" type="text" class="form-control oficina-form" placeholder="Teléfonos"> </div>
+              <input data-id="telefono" type="text" class="form-control oficina-form" placeholder="Teléfonos"> </div>
             <div class="form-group"> <label>Extensión</label>
-              <input id="extension" type="text" class="form-control oficina-form" placeholder="Extensión"> </div>
+              <input data-id="extension" type="text" class="form-control oficina-form" placeholder="Extensión"> </div>
             <div class="form-group"> <label>Email</label>
-              <input id="mail" type="email" class="form-control oficina-form" placeholder="Correo Electrónico"> </div>
+              <input data-id="mail" type="email" class="form-control oficina-form" placeholder="Correo Electrónico"> </div>
             <div class="form-group"> <label>Horario de Atención</label>
-              <input id="horario" type="text" class="form-control oficina-form" placeholder="Horario de Atención"> </div>
+              <input data-id="horario" type="text" class="form-control oficina-form" placeholder="Horario de Atención"> </div>
 
-          <a id="oficina-add" class="btn btn-primary" href="#">Agregar </a>
+          <button id="oficina-add" class="btn btn-primary" href="#">Agregar </button>
       </div>
     </div>
   </div>
