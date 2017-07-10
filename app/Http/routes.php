@@ -25,6 +25,16 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 
+Route::get('/api/requisito/{id}', 'Admin\TramiteAdminController@showRequisito');
+Route::get('/api/tramite/{id}/requisito', 'Admin\TramiteAdminController@showRequisitoByTramite');
+Route::post('/api/requisito/{id}', 'Admin\TramiteAdminController@editRequisito');
+Route::post('/api/delete/requisito/{id}', 'Admin\TramiteAdminController@deleteRequisito');
+Route::post('/api/add/tramite/{id}/requisito/', 'Admin\TramiteAdminController@addRequisito');
+
+
+
+
+
 Route::get('/admin/tramites',function(){
   $tramites = Tramite::orderBy('created_at', 'asc')->get();
 
@@ -69,5 +79,9 @@ Route::get('/api/tramite/{id}',function($id){
     return response()->json(['data'=>$tramites]);
 
 });
+
+
+
+
 
 Route::match(['get', 'post'],'/admin/update/tramites/{id}','Admin\TramiteAdminController@update');

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Tramite;
 use App\Rubro;
+use App\Requisito;
 
 class TramiteAdminController extends Controller
 {
@@ -34,23 +35,20 @@ class TramiteAdminController extends Controller
 
 
 
-  //    $t=Tramite::findOrFail($id);
+      $tramite=Tramite::findOrFail($id);
 
-  //        $t->requisito()->save(Requisito::create($request->all()));
-
-           //Requisito::create($request->all());
-
-        // return response()->json(['mensaje'=>$request]);
-				return response()->json(['data'=>$request,'mensaje'=>'add']);
+        	$tramite->requisito()->save(Requisito::create($request->all()));
+				return response()->json(['data'=>$request,'mensaje'=>'added']);
 
     }
 
 
-    public function editRequisito(Request $request)
-    {
+			public function editRequisito(Request $request,$id)
+			{
 
 
-      $requisito=Requisito::findOrFail($request->input('id'))->update($request->all());
+//      $requisito=Requisito::findOrFail($request->input('id'))->update($request->all());
+			$requisito=Requisito::findOrFail($id)->update($request->all());
 
 
 			return response()->json(['data'=>$requisito,'mensaje'=>'edited']);
@@ -60,12 +58,7 @@ class TramiteAdminController extends Controller
     public function deleteRequisito(Request $request, $id)
     {
 
-      $tramite=Tramite::findOrFail($id)->update($request->all());
-
-      $tramite->requisito()->save(Requisito::create($request->all()));
-
-				$tramite->requisito()->detach([$request->->input('id')]);
-           //Requisito::create($request->all());
+    		  $requisito=Requisito::findOrFail($id)->delete();;
 
          return response()->json(['data'=>$request,'mensaje'=>'deleted']);
 
@@ -79,5 +72,14 @@ class TramiteAdminController extends Controller
 		  return response()->json($requisito);
 
 		}
+
+				public function showRequisitoByTramite($id)
+		 		{
+				 //
+				    $tramite=Tramite::with('requisito')->findOrFail($id);
+						$requisito=$tramite->requisito()->get();
+				  	return response()->json($requisito);
+
+				}
 
 }

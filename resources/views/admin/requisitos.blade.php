@@ -1,28 +1,40 @@
 <div role="tabpanel" class="tab-pane" id="requisitos">
       <div class="container">
-        
-      <div class="row">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
 
+
+      <div class="row">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group"> <label>Descripción</label>
+            <input type="text" data-id="descripcion" class="form-control requisitos-form" placeholder="Descripción"> </div>
+        </div>
+      </div>
+
+      <div class="row">
+      
+        
         <div class="col-md-2">
           <div class="form-group"> <label>Original</label>
-            <input type="text" class="form-control" placeholder="Original"> </div>
+            <input type="text" data-id="original" class="form-control requisitos-form" placeholder="Original"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Copias</label>
-            <input type="text" class="form-control" placeholder="Copias"> </div>
+            <input type="text" data-id="copias" class="form-control requisitos-form" placeholder="Copias"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Fundamento legal</label>
-            <input type="text" class="form-control" placeholder="Fundamento Legal"> </div>
+            <input type="text" data-id="fundamento" class="form-control requisitos-form" placeholder="Fundamento Legal"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Persona</label>
-            <input type="text" class="form-control" placeholder="Persona"> </div>
+            <input type="text" data-id="tipo" class="form-control requisitos-form" placeholder="Persona"> </div>
         </div>
         <div class="col-md-2">
           <div class="form-group"><label>Agregar</label>
-            <button style="display:block" href="#" class="btn btn-primary">+</button>
+            <button id="add-requisito" style="display:block" href="#" class="btn btn-primary">+</button>
           </div>
         </div>
       </div>
@@ -37,51 +49,36 @@
     </div>
 
     <div class="container">
+
       <div class="row">
         <div class="col-md-12">
-          <table class="table">
+          <table data-tramiteId="{{$tramites->id}}" id="dataTable" class="cell-border" cellspacing="0"  style="width:100%">
             <thead>
               <tr>
-                <th>#</th>
+
                 <th>Requisito </th>
                 <th>Original</th>
                 <th>Copias</th>
                 <th>Fundamento Legal </th>
                 <th>Persona</th>
-                <th>Editar</th>
-                <th>Borrar</th>
+                 <th>Editar</th>
+                  <th>Borrar</th>
+               
               </tr>
             </thead>
-            <tbody>
-
-            @foreach ($tramites->requisito as $requisito)
-              <tr>
-                <td>{{ $requisito->id }}</td>
-                <td>{{ $requisito->descripcion }} </td>
-                <td>{{ $requisito->original }}</td>
-                <td>{{ $requisito->copia }}</td>
-                <td>{{ $requisito->fundamento }}</td>
-                <td>{{ $requisito->tipo }}</td>
-                <td>
-                  <a href="#" class="btn btn-primary">Editar</a>
-                </td>
-                <td>
-                  <a href="#" class="btn btn-danger">Borrar</a>
-                </td>
-              </tr>
-            @endforeach
-
-            </tbody>
+          
+ 
           </table>
         </div>
       </div>
+      
     </div>
 
-    
 
-    
 
-    <div class="modal" id="editModal">
+
+
+    <div class="modal" id="requisitosEditModal">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -91,32 +88,34 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-md-12">
-              <div class="form-group"> <label>Requisito</label>
-                <input type="email" class="form-control" placeholder="Requisito"> </div>
+              <div  class="form-group"> 
+                <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
+              <div  class="form-group"> <label>Requisito</label>
+                <input id="descripcion" type="text" class="form-control" value="" placeholder="Requisito"> </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-3">
               <div class="form-group"> <label>Original</label>
-                <input type="email" class="form-control" placeholder="Original"> </div>
+                <input id="original" type="text" class="form-control" value="" placeholder="Original"> </div>
             </div>
             <div class="col-md-3">
               <div class="form-group"> <label>Copias</label>
-                <input type="email" class="form-control" placeholder="Copias"> </div>
+                <input id="copia" type="text" class="form-control" value="" placeholder="Copias"> </div>
             </div>
             <div class="col-md-3">
               <div class="form-group"> <label>Fundamento legal</label>
-                <input type="email" class="form-control" placeholder="Fundamento Legal"> </div>
+                <textarea id="fundamento" type="text" class="form-control" value="" placeholder="Fundamento Legal"></textarea></div>
             </div>
             <div class="col-md-3">
               <div class="form-group"> <label>Persona</label>
-                <input type="email" class="form-control" placeholder="Persona"> </div>
+                <input id="tipo" type="text" class="form-control" value="" placeholder="Persona"> </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <a class="btn btn-default" data-dismiss="modal">Close</a>
-          <a class="btn btn-primary text-white">Save changes</a>
+          <a id="save-requisito" class="btn btn-primary text-white">Guardar cambios</a>
         </div>
       </div>
     </div>
