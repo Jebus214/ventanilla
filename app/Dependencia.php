@@ -12,7 +12,7 @@ class Dependencia extends Model
 
 
     public function tramite() {
-        return $this->belongsTo(Tramite::class);
+        return $this->hasMany(Tramite::class);
    }
 
 

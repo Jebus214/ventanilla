@@ -12,6 +12,8 @@
 */
 use App\Tramite;
 use App\Rubro;
+use App\User;
+use App\Dependencia;
 
 
 
@@ -97,3 +99,40 @@ Route::get('/api/tramite/{id}',function($id){
 
 
 Route::match(['get', 'post'],'/admin/update/tramites/{id}','Admin\TramiteAdminController@update');
+
+
+
+
+
+
+Route::get('/api/dependencia/{id}/tramites',function($id){
+
+//$user = User::with('dependencia')->findOrFail($id);
+//return $user->pregunta;
+//$user->dependencia();
+
+//$d=$user->dependencia()->with('tramite')->get();
+
+$dependencia = Dependencia::findOrFail($id);
+
+$t=$dependencia->tramite()->get();
+
+
+    return response()->json(['data'=>$t]);
+
+});
+
+
+
+
+
+Route::get('/api/user/{id}/tramites',function($id){
+
+  $user = User::with('dependencia')->findOrFail($id);
+
+
+  $dependencia=$user->dependencia()->with('tramite')->get();
+  $t=$dependencia[0]->tramite;
+  return response()->json(['data'=>$t]);
+
+});
