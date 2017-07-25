@@ -1,12 +1,20 @@
 @extends('layouts.admin')
 
+
+@section('css')
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+@endsection
+
+
 @section('content')
  
 
  <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <table class="table">
+
+              <table id="catalogoTable" class="display" cellspacing="0" width="100%">
               <thead>
                 <tr>
                   <th>#</th>
@@ -39,3 +47,9 @@
       </div>
  
  @endsection
+
+
+
+  @section('javascript')
+      @include('admin/js/requisitos')
+  @endsection

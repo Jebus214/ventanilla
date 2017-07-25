@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pregunta extends Model
 {
     //
-    protected $fillable = ['id_tramite','pregunta','respuesta'];
+    protected $fillable = ['tramite_id','pregunta','respuesta'];
 
 
     public function tramite() {

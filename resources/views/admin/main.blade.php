@@ -28,6 +28,8 @@
               <input type="text" name="doc_obtener" class="form-control" placeholder="Documento a Obtene" value="{{ $tramites->doc_obtener}}"> </div>
             <div class="form-group"> <label>Fundamento Legal</label>
               <input type="text" name="fun_legal" class="form-control" placeholder="Fundamento Legal" value="{{ $tramites->fun_legal}}"> </div>
+            @include('admin/fundamentoLista')
+
             <div class="form-group"> <label>Costo</label>
               <input type="text" name="costos" class="form-control" placeholder="Costo" value="{{ $tramites->costo}}"> </div>
             <div class="form-group"> <label>Donde Pagar</label>

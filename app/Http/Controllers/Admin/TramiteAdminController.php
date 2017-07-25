@@ -10,6 +10,7 @@ use App\Oficina;
 use App\Rubro;
 use App\Requisito;
 use App\Pregunta;
+use App\Fundamento;
 
 
 class TramiteAdminController extends Controller
@@ -19,6 +20,8 @@ class TramiteAdminController extends Controller
 	    public function __construct()
     {
        // $this->middleware('superAdmin');
+			 $this->middleware('auth');
+
     }
 
      public function update(Request $request, $id)
@@ -212,5 +215,68 @@ class TramiteAdminController extends Controller
 
 
 								///////////////////////////////////////////////////////////////////////////////////
+
+
+
+																////////////////////////////////////////////////////////////////////////////////
+																////Fundamento API
+																//
+																//
+																/////////////////////////////////////////////////////////////////////////////7/
+
+																public function addFundamento(Request $request, $id)
+													     {
+
+
+
+													       $tramite=Tramite::findOrFail($id);
+
+													         	$tramite->fundamento()->save(Fundamento::create($request->all()));
+													 				return response()->json(['data'=>$request,'mensaje'=>'added']);
+
+													     }
+
+
+													 			public function editFundamento(Request $request,$id)
+													 			{
+
+
+													 //      $requisito=Fundamento::findOrFail($request->input('id'))->update($request->all());
+													 			$fundamento=Fundamento::findOrFail($id)->update($request->all());
+
+
+													 			return response()->json(['data'=>$fundamento,'mensaje'=>'edited']);
+
+													     }
+
+													     public function deleteFundamento(Request $request, $id)
+													     {
+
+													     		  $fundamento=Fundamento::findOrFail($id)->delete();;
+
+													          return response()->json(['data'=>$request,'mensaje'=>'deleted']);
+
+													     }
+
+
+													 		public function showFundamento($id)
+													  		{
+													 		 //
+													 		  $fundamento=Fundamento::findOrFail($id);
+													 		  return response()->json($fundamento);
+
+													 		}
+
+													 				public function showFundamentoByTramite($id)
+													 		 		{
+													 				 //
+													 				    $tramite=Tramite::with('oficina')->findOrFail($id);
+													 						$fundamento=$tramite->fundamento()->get();
+													 				  	return response()->json($fundamento);
+
+													 				}
+
+
+																///////////////////////////////////////////////////////////////////////////////////
 
 }

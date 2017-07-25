@@ -14,6 +14,7 @@ use App\Tramite;
 use App\Rubro;
 use App\User;
 use App\Dependencia;
+use App\Fundamento;
 
 
 
@@ -25,6 +26,9 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+
 
 //requisitos admin Routes
 Route::get('/api/requisito/{id}', 'Admin\TramiteAdminController@showRequisito');
@@ -47,6 +51,16 @@ Route::post('/api/delete/pregunta/{id}', 'Admin\TramiteAdminController@deletePre
 Route::post('/api/add/tramite/{id}/pregunta/', 'Admin\TramiteAdminController@addPregunta');
 
 
+//Pregunta admin Routes
+Route::get('/api/fundamento/{id}', 'Admin\TramiteAdminController@showFundamento');
+Route::get('/api/tramite/{id}/fundamento', 'Admin\TramiteAdminController@showFundamentoByTramite');
+Route::post('/api/fundamento/{id}', 'Admin\TramiteAdminController@editFundamento');
+Route::post('/api/delete/fundamento/{id}', 'Admin\TramiteAdminController@deleteFundamento');
+Route::post('/api/add/tramite/{id}/fundamento/', 'Admin\TramiteAdminController@addFundamento');
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 Route::get('/admin/tramites',function(){
@@ -55,7 +69,7 @@ Route::get('/admin/tramites',function(){
   return view('admin/catalogo', [
       'tramites' => $tramites
   ]);
-});
+})->middleware(['auth']);
 
 
 Route::get('/admin/tramites/{id}',function($id){
@@ -69,7 +83,7 @@ Route::get('/admin/tramites/{id}',function($id){
   ]);
 
 
-});
+})->middleware(['auth']);
 
 
 Route::get('/api/tramite/{id}',function($id){
@@ -80,7 +94,7 @@ Route::get('/api/tramite/{id}',function($id){
 
     return response()->json(['data'=>$tramites]);
 
-});
+})->middleware(['auth']);
 
 
 
@@ -92,7 +106,7 @@ Route::get('/api/tramite/{id}',function($id){
 
     return response()->json(['data'=>$tramites]);
 
-});
+})->middleware(['auth']);
 
 
 

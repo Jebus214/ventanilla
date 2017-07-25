@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Unidad extends Model
 {
     //
-    protected $fillable = ['id_dependencia','nombre'];
+    protected $fillable = ['dependencia_id','nombre'];
 
 
 
@@ -19,5 +19,5 @@ class Unidad extends Model
 	public function user() {
         return $this->hasMany(User::class);
    }
-      
+
 }
