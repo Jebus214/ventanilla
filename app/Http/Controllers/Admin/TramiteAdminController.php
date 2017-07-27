@@ -11,6 +11,7 @@ use App\Rubro;
 use App\Requisito;
 use App\Pregunta;
 use App\Fundamento;
+use App\Unidad;
 
 
 class TramiteAdminController extends Controller
@@ -24,16 +25,64 @@ class TramiteAdminController extends Controller
 
     }
 
+
+		public function catalogoUser(Request $request){
+
+
+			$user = $request->user();
+
+
+			$dependencia=$user->dependencia()->with('tramite')->get();
+			$tramites=$dependencia[0]->tramite;
+
+
+			//$tramites = Tramite::orderBy('created_at', 'asc')->get();
+
+		  return view('admin/catalogo', [
+		      'tramites' => $tramites
+		  ]);
+
+		}
+
      public function update(Request $request, $id)
     {
 
-      $t=Tramite::findOrFail($id)->update($request->all());
 
+  	$unidadNew = $request->input('unidad_nombre');
+
+
+
+	    $t=Tramite::findOrFail($id)->update($request->all());
+
+			$tramite=Tramite::findOrFail($id);
+
+				$unidad=unidad::findOrFail($tramite->unidad->id);
+
+				$unidad->update(['nombre'=>$unidadNew]);
 
         // return response()->json(['mensaje'=>$request]);
     	return redirect('/admin/tramites/'.$id);
 
     }
+
+
+		public function updateTitular(Request $request, $id)
+	 {
+
+		 $tramite=Tramite::findOrFail($id);
+		 $dependencia=$tramite->
+		 $unidad=
+
+
+
+		 $t=Tramite::findOrFail($id)->update($request->all());
+
+
+			 // return response()->json(['mensaje'=>$request]);
+		 return redirect('/admin/tramites/'.$id);
+
+	 }
+
 
 
      public function addRequisito(Request $request, $id)
@@ -89,11 +138,12 @@ class TramiteAdminController extends Controller
 				}
 
 
-				////////////////////////////////////////////////////////////////////////////////
-				////Oficinas API
-				//
-				//
-				/////////////////////////////////////////////////////////////////////////////7/
+				///////////////////////////////////////////////////////////////////////////
+				////Oficinas API																													/
+				//																																				/
+				//																																				/
+				//																																				/
+				///////////////////////////////////////////////////////////////////////////
 
 				public function addOficina(Request $request, $id)
 	     {
@@ -141,15 +191,141 @@ class TramiteAdminController extends Controller
 	 				public function showOficinaByTramite($id)
 	 		 		{
 	 				 //
-	 				    $tramite=Tramite::with('oficina')->findOrFail($id);
-	 						$oficina=$tramite->oficina()->get();
-	 				  	return response()->json($oficina);
+							$tramite=Tramite::with('oficina')->findOrFail($id);
+							$oficina=$tramite->oficina()->get();
+							$oficina=$oficina->where('tipo','otro')->values();
+							return response()->json($oficina);
 
 	 				}
 
 
 				///////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+								///////////////////////////////////////////////////////////////////////////
+								////Oficinas API																													/
+								//																																				/
+								//																																				/
+								//																																				/
+								///////////////////////////////////////////////////////////////////////////
+
+								public function addOficinaDependencia(Request $request, $id)
+					     {
+
+
+
+					       $tramite=Tramite::findOrFail($id);
+
+					         	$tramite->oficina()->save(Oficina::create($request->all()));
+					 				return response()->json(['data'=>$request,'mensaje'=>'added']);
+
+
+					     }
+
+
+					 			public function editOficinaDependencia(Request $request,$id)
+					 			{
+
+
+					 //      $requisito=Oficina::findOrFail($request->input('id'))->update($request->all());
+					 			$oficina=Oficina::findOrFail($id)->update($request->all());
+
+
+					 			return response()->json(['data'=>$oficina,'mensaje'=>'edited']);
+
+					     }
+
+					     public function deleteOficinaDependencia(Request $request, $id)
+					     {
+
+					     		  $oficina=Oficina::findOrFail($id)->delete();;
+
+					          return response()->json(['data'=>$request,'mensaje'=>'deleted']);
+
+					     }
+
+
+					 		public function showOficinaDependencia($id)
+					  		{
+					 		 //
+					 		  $oficinaDependencia=Oficina::findOrFail($id);
+					 		  return response()->json($oficinaDependencia);
+
+					 		}
+
+					 				public function showOficinaDependenciaByTramite($id)
+					 		 		{
+					 				 //
+					 				    $tramite=Tramite::with('oficina')->findOrFail($id);
+					 						$oficinaDependencia=$tramite->oficina()->get();
+											$oficinaDependencia=$oficinaDependencia->where('tipo','dependencia')->values();
+					 				  	return response()->json($oficinaDependencia);
+
+					 				}
+
+
+								///////////////////////////////////////////////////////////////////////////////////
+
+
+																public function addOficinaUnidad(Request $request, $id)
+													     {
+
+
+
+													       $tramite=Tramite::findOrFail($id);
+
+													         	$tramite->oficina()->save(Oficina::create($request->all()));
+													 				return response()->json(['data'=>$request,'mensaje'=>'added']);
+
+													     }
+
+
+													 			public function editOficinaUnidad(Request $request,$id)
+													 			{
+
+
+													 //      $requisito=Oficina::findOrFail($request->input('id'))->update($request->all());
+													 			$oficina=Oficina::findOrFail($id)->update($request->all());
+
+
+													 			return response()->json(['data'=>$oficina,'mensaje'=>'edited']);
+
+													     }
+
+													     public function deleteOficinaUnidad(Request $request, $id)
+													     {
+
+													     		  $oficina=Oficina::findOrFail($id)->delete();;
+
+													          return response()->json(['data'=>$request,'mensaje'=>'deleted']);
+
+													     }
+
+
+													 		public function showOficinaUnidad($id)
+													  		{
+													 		 //
+													 		  $oficinaUnidad=Oficina::findOrFail($id);
+													 		  return response()->json($oficinaUnidad);
+
+													 		}
+
+													 				public function showOficinaUnidadByTramite($id)
+													 		 		{
+													 				 //
+													 				    $tramite=Tramite::with('oficina')->findOrFail($id);
+													 						$oficinaUnidad=$tramite->oficina()->get();
+
+																			$oficinaUnidad=$oficinaUnidad->where('tipo','unidad')->values();
+
+													 				  	return response()->json($oficinaUnidad);
+
+													 				}
+
+
+																///////////////////////////////////////////////////////////////////////////////////
 
 
 

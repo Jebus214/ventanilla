@@ -21,6 +21,9 @@ class Dependencia extends Model
     }
 
 
+    public function titular() {
+        return $this->belongsTo(Titular::class);
+   }
 
    	public function user() {
         return $this->hasMany(User::class);

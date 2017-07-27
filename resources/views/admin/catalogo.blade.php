@@ -8,7 +8,7 @@
 
 
 @section('content')
- 
+
 
  <div class="container">
         <div class="row">
@@ -20,7 +20,8 @@
                   <th>#</th>
                   <th>nombre </th>
                   <th>rubro</th>
-                  <th>dependencia</th>
+                  <th>unidad</th>
+                  <th>Ultima actualiación</th>
                   <th>Editar</th>
                   <th>Borrar</th>
                 </tr>
@@ -28,10 +29,11 @@
               <tbody>
                 @foreach ($tramites as $tramite)
                 <tr>
-                  <td>{{ $tramite->id }} </td>	
+                  <td>{{ $tramite->id }} </td>
                   <td>{{ $tramite->nombre }} </td>
                   <td>{{ $tramite->rubro->nombre }} </td>
-                  <td>{{ $tramite->dependencia->nombre }} </td>
+                  <td>{{ $tramite->unidad->nombre }} </td>
+                   <td>{{ $tramite->updated_at }} </td>
                   <td>
                     <a href="/admin/tramites/{{$tramite->id}}" class="btn btn-primary" >Editar</a>
                   </td>
@@ -45,7 +47,7 @@
           </div>
         </div>
       </div>
- 
+
  @endsection
 
 

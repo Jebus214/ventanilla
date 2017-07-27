@@ -25,6 +25,18 @@
             <input type="text" data-id="copias" class="form-control requisito-form" placeholder="Copias"> </div>
         </div>
         <div class="col-md-2">
+          <div class="form-group"> <label>Artículo</label>
+            <input type="text" data-id="articulo" class="form-control requisito-form" placeholder="Artículo"> </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group"> <label>Fracción</label>
+            <input type="text" data-id="fraccion" class="form-control requisito-form" placeholder="Fracción"> </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group"> <label>Ley</label>
+            <input type="text" data-id="ley" class="form-control requisito-form" placeholder="Ley"> </div>
+        </div>
+        <div class="col-md-2">
           <div class="form-group"> <label>Fundamento legal</label>
             <input type="text" data-id="fundamento" class="form-control requisito-form" placeholder="Fundamento Legal"> </div>
         </div>
@@ -59,6 +71,12 @@
                 <th>Requisito </th>
                 <th>Original</th>
                 <th>Copias</th>
+                <th>Artículo</th>
+
+                <th>Fracción</th>
+
+                <th>Ley</th>
+
                 <th>Fundamento Legal </th>
                 <th>Persona</th>
                  <th>Editar</th>
@@ -103,6 +121,18 @@
             <div class="col-md-3">
               <div class="form-group"> <label>Copias</label>
                 <input id="copia" type="text" class="form-control" value="" placeholder="Copias"> </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group"> <label>Artículo</label>
+                <input id="articulo" type="text" class="form-control" value="" placeholder="Artículo"> </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group"> <label>Fracción</label>
+                <input id="fraccion" type="text" class="form-control" value="" placeholder="Fracción"> </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group"> <label>Ley</label>
+                <input id="ley" type="text" class="form-control" value="" placeholder="Ley"> </div>
             </div>
             <div class="col-md-3">
               <div class="form-group"> <label>Fundamento legal</label>

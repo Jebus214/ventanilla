@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Fundamento extends Model
 {
     //
-    protected $fillable = ['tramite_id','descripcion'];
+    protected $fillable = ['tramite_id','articulo','fraccion','ley'];
 
 
    	public function tramite() {

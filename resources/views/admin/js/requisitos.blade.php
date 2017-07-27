@@ -295,8 +295,51 @@ $('#'+resourceName+'-add').click(function(e){
 bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitosEditModal","requisito",[  {"data":"descripcion"},
                     {"data":"original"},
                     {"data":"copia"},
+                    {"data":"articulo"},
+                    {"data":"fraccion"},
+                    {"data":"ley"},
                     {"data":"fundamento"},
                     {"data":"tipo"},                  
+                    ]);
+
+
+
+
+bindTable("OficinaDependenciaTable",$('#OficinaDependenciaTable').attr('data-tramiteId'),"oficinaDependenciaEditModal","oficinaDependencia",[
+                    {"data":"titular"},
+                    {"data":"oficina"},
+                    {"data":"calle"},
+                    {"data":"numint"},
+                    {"data":"numext"},
+                    {"data":"colonia"}, 
+                    {"data":"municipio"},                  
+                    {"data":"CP"},  
+                    {"data":"lada"},  
+                    {"data":"telefono"},  
+                    {"data":"extension"},
+                    {"data":"mail"}, 
+                    {"data":"horario"},     
+                  
+                  
+                    ]);
+
+
+bindTable("OficinaUnidadTable",$('#OficinaUnidadTable').attr('data-tramiteId'),"oficinaUnidadEditModal","oficinaUnidad",[
+                    {"data":"titular"},
+                    {"data":"oficina"},
+                    {"data":"calle"},
+                    {"data":"numint"},
+                    {"data":"numext"},
+                    {"data":"colonia"}, 
+                    {"data":"municipio"},                  
+                    {"data":"CP"},  
+                    {"data":"lada"},  
+                    {"data":"telefono"},  
+                    {"data":"extension"},
+                    {"data":"mail"}, 
+                    {"data":"horario"},     
+                  
+                  
                     ]);
 
 
@@ -336,17 +379,18 @@ bindTable("preguntaTable",$('#preguntaTable').attr('data-tramiteId'),"preguntaEd
 
 
 bindTable("fundamentoTable",$('#fundamentoTable').attr('data-tramiteId'),"fundamentoEditModal","fundamento",[
-                    {"data":"descripcion"},
-                               
-                  
+                     {"data":"articulo"},
+                     {"data":"fraccion"},          
+                     {"data":"ley"},
+                    
                     ]);
 
 
 
-$("#fundamentoTable_length").hide();
-$("#fundamentoTable_filter").hide();
-$("#fundamentoTable_info").hide();
-$("#fundamentoTable_paginate").hide();
+//$("#fundamentoTable_length").hide();
+//$("#fundamentoTable_filter").hide();
+//$("#fundamentoTable_info").hide();
+//$("#fundamentoTable_paginate").hide();
 
 
 });

@@ -25,6 +25,9 @@ class User extends Authenticatable
     ];
 
 
+    public function tramite() {
+        return $this->hasMany(Tramite::class);
+   }
 
 
       public function unidad()

@@ -18,7 +18,6 @@ use App\Fundamento;
 
 
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -36,12 +35,31 @@ Route::get('/api/tramite/{id}/requisito', 'Admin\TramiteAdminController@showRequ
 Route::post('/api/requisito/{id}', 'Admin\TramiteAdminController@editRequisito');
 Route::post('/api/delete/requisito/{id}', 'Admin\TramiteAdminController@deleteRequisito');
 Route::post('/api/add/tramite/{id}/requisito/', 'Admin\TramiteAdminController@addRequisito');
+
 //Oficinas admin Routes
 Route::get('/api/oficina/{id}', 'Admin\TramiteAdminController@showOficina');
 Route::get('/api/tramite/{id}/oficina', 'Admin\TramiteAdminController@showOficinaByTramite');
 Route::post('/api/oficina/{id}', 'Admin\TramiteAdminController@editOficina');
 Route::post('/api/delete/oficina/{id}', 'Admin\TramiteAdminController@deleteOficina');
 Route::post('/api/add/tramite/{id}/oficina/', 'Admin\TramiteAdminController@addOficina');
+
+//Oficinas admin Routes
+Route::get('/api/oficinaDependencia/{id}', 'Admin\TramiteAdminController@showOficinaDependencia');
+Route::get('/api/tramite/{id}/oficinaDependencia', 'Admin\TramiteAdminController@showOficinaDependenciaByTramite');
+Route::post('/api/oficinaDependencia/{id}', 'Admin\TramiteAdminController@editOficinaDependencia');
+Route::post('/api/delete/oficinaDependencia/{id}', 'Admin\TramiteAdminController@deleteOficinaDependencia');
+Route::post('/api/add/tramite/{id}/oficinaDependencia/', 'Admin\TramiteAdminController@addOficinaDependencia');
+
+//Oficinas admin Routes
+Route::get('/api/oficinaUnidad/{id}', 'Admin\TramiteAdminController@showOficinaUnidad');
+Route::get('/api/tramite/{id}/oficinaUnidad', 'Admin\TramiteAdminController@showOficinaUnidadByTramite');
+Route::post('/api/oficinaUnidad/{id}', 'Admin\TramiteAdminController@editOficinaUnidad');
+Route::post('/api/delete/oficinaUnidad/{id}', 'Admin\TramiteAdminController@deleteOficinaUnidad');
+Route::post('/api/add/tramite/{id}/oficinaUnidad/', 'Admin\TramiteAdminController@addOficinaUnidad');
+
+
+
+
 
 //Pregunta admin Routes
 Route::get('/api/pregunta/{id}', 'Admin\TramiteAdminController@showPregunta');
@@ -60,11 +78,60 @@ Route::post('/api/add/tramite/{id}/fundamento/', 'Admin\TramiteAdminController@a
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+Route::get('/template',function(){
 
 
 
-Route::get('/admin/tramites',function(){
+return view('cedula_template');
+});
+
+
+Route::get('/pdfTest2/{id}',function($id){
+
+  $tramites = Tramite::findOrFail($id);
+  $rubros=Rubro::orderBy('id', 'asc')->get();
+
+
+  $pdf = App::make('dompdf.wrapper');
+
+  //$pdf->setOptions([ "defaultPaperSize" => "letter","defaultMediaType" => "full"]);
+
+
+  $pdf->setPaper('letter', 'portrait')->loadView('pdf', ['tramites' => $tramites,'rubros'=> $rubros]);
+  //$pdf->loadView('cedula_template');
+
+return $pdf->stream();
+
+});
+Route::get('/pdfTest/{id}',function($id){
+
+  $tramites = Tramite::findOrFail($id);
+  $rubros=Rubro::orderBy('id', 'asc')->get();
+
+
+  $pdf = App::make('dompdf.wrapper');
+
+  //$pdf->setOptions([ "defaultPaperSize" => "letter","defaultMediaType" => "full"]);
+
+
+  $pdf->setPaper('letter', 'portrait')->loadView('cedula_template', ['tramites' => $tramites,'rubros'=> $rubros]);
+  //$pdf->loadView('cedula_template');
+
+return $pdf->stream();
+
+});
+
+//Catalogo admin Routes
+Route::get('/admin/tramites', 'Admin\TramiteAdminController@catalogoUser');
+
+
+
+Route::get('/admin/tramitesss',function(){
+
+
   $tramites = Tramite::orderBy('created_at', 'asc')->get();
+
+
 
   return view('admin/catalogo', [
       'tramites' => $tramites

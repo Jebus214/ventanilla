@@ -20,6 +20,7 @@
 <ul class="nav nav-tabs" role="tablist">
 
       <li role="presentation"><a href="#tramites" aria-controls="tramites" role="tab" data-toggle="tab">Datos</a></li>
+      <li role="presentation"><a href="#fundamento" aria-controls="fundamento" data-toggle="tab">Fundamento</a></li>
       <li role="presentation"><a href="#requisitos" aria-controls="requisitos" data-toggle="tab">Requisitos</a></li>
       <li role="presentation"><a href="#oficinas" aria-controls="oficinas" data-toggle="tab">Oficinas</a></li>
       <li role="presentation"><a href="#preguntas" aria-controls="preguntas" data-toggle="tab">Preguntas Frecuentes</a></li>
@@ -34,6 +35,9 @@
   <input type="hidden" id="_token" name="_token" value="{!! csrf_token() !!}">
 
   @include('admin/main')
+
+    @include('admin/fundamento')
+
   @include('admin/requisitos')
   @include('admin/oficinas')
   @include('admin/preguntas')

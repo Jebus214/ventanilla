@@ -20,4 +20,12 @@ class Unidad extends Model
         return $this->hasMany(User::class);
    }
 
+
+   public function titular() {
+       return $this->belongsTo(Titular::class);
+  }
+
+
+
+
 }
