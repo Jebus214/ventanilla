@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tramite extends Model
 {
     //
-    protected $fillable = ['dependecia_id','rubro_id','unidad_id','nombre','descripcion','fun_legal','doc_obtener','vigencia','casos','criterios','duracion','tiempo_rep','costo','formapago','dondepag','elabora','revisa','autoriza','vbpresidencia'];
+    protected $fillable = ['dependecia_id','rubro_id','unidad_id','nombre','tipo','descripcion','fun_legal','doc_obtener','direccion_web','vigencia','duracion','casos','criterios','duracion','tiempo_rep','costo','formapago','dondepag','alternativa_pago','elabora','revisa','autoriza','vbpresidencia'];
 
 
    	public function rubro() {

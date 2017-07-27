@@ -19,14 +19,13 @@
                 <input data-id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
             <div class="form-group"> <label>Titular de la Dependencia</label>
               <input data-id="titular" type="text" class="form-control oficinaDependencia-form" placeholder="Titular de la Dependencia"> </div>
-            <div class="form-group"> <label>Nombre de Oficina</label>
-              <input data-id="oficina" type="text" class="form-control oficinaDependencia-form" placeholder="Nombre de Oficina"> </div>
+            
             <div class="form-group"> <label>Calle</label>
               <input data-id="calle" type="text" class="form-control oficinaDependencia-form" placeholder="Calle"> </div>
             <div class="form-group"> <label>No  Ext</label>
               <input data-id="numext" type="text" class="form-control oficinaDependencia-form" placeholder="No  Ext"> </div>
-              <div class="form-group"> <label>No  Ext</label>
-              <input data-id="numint" type="text" class="form-control oficinaDependencia-form" placeholder="No  Ext"> </div>
+              <div class="form-group"> <label>No  Int</label>
+              <input data-id="numint" type="text" class="form-control oficinaDependencia-form" placeholder="No  Int"> </div>
             <div class="form-group"> <label>Colonia</label>
               <input data-id="colonia" type="text" class="form-control oficinaDependencia-form" placeholder="Colonia"> </div>
             <div class="form-group"> <label>Municipio</label>
@@ -69,7 +68,6 @@
               <tr>
        
                 <th>Titular de la Dependencia</th>
-                <th>Nombre</th>
                 <th>Calle</th>
                 <th>No Int</th>
                 <th>No Ext</th>
@@ -111,14 +109,13 @@
                 
                 <div class="form-group"> <label>Titular de la Dependencia</label>
                   <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Oficina"> </div>
-                <div class="form-group"> <label>Nombre de Oficina</label>
-                  <input id="oficina" type="text" class="form-control" value="" placeholder="Nombre de Oficina"> </div>
+                
                 <div class="form-group"> <label>Calle</label>
                   <input id="calle" type="text" class="form-control" value="" placeholder="Calle"> </div>
                 <div class="form-group"> <label>No Int</label>
-                  <input id="numint" type="text" class="form-control" value="" placeholder="No Int y Ext"> </div>
+                  <input id="numint" type="text" class="form-control" value="" placeholder="No Int "> </div>
                 <div class="form-group"> <label>No Ext</label>
-                  <input id="numext" type="text" class="form-control" value="" placeholder="No Int y Ext"> </div>
+                  <input id="numext" type="text" class="form-control" value="" placeholder="No Ext"> </div>
                 <div class="form-group"> <label>Colonia</label>
                   <input id="colonia" type="text" class="form-control" value="" placeholder="Colonia"> </div>
                 <div class="form-group"> <label>Municipio</label>
@@ -170,14 +167,13 @@
                 <input data-id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
             <div class="form-group"> <label>Titular de la Unidad</label>
               <input data-id="titular" type="text" class="form-control oficinaUnidad-form" placeholder="Titular de la Oficina"> </div>
-            <div class="form-group"> <label>Nombre de Oficina</label>
-              <input data-id="oficina" type="text" class="form-control oficinaUnidad-form" placeholder="Nombre de Oficina"> </div>
+            
             <div class="form-group"> <label>Calle</label>
               <input data-id="calle" type="text" class="form-control oficinaUnidad-form" placeholder="Calle"> </div>
             <div class="form-group"> <label>No  Ext</label>
               <input data-id="numext" type="text" class="form-control oficinaUnidad-form" placeholder="No  Ext"> </div>
-              <div class="form-group"> <label>No  Ext</label>
-              <input data-id="numint" type="text" class="form-control oficinaUnidad-form" placeholder="No  Ext"> </div>
+              <div class="form-group"> <label>No  Int</label>
+              <input data-id="numint" type="text" class="form-control oficinaUnidad-form" placeholder="No  Int"> </div>
             <div class="form-group"> <label>Colonia</label>
               <input data-id="colonia" type="text" class="form-control oficinaUnidad-form" placeholder="Colonia"> </div>
             <div class="form-group"> <label>Municipio</label>
@@ -215,7 +211,7 @@
               <tr>
        
                 <th>Titular de la Unidad</th>
-                <th>Nombre</th>
+                
                 <th>Calle</th>
                 <th>No Int</th>
                 <th>No Ext</th>
@@ -255,16 +251,14 @@
                 <div  class="form-group"> 
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
                 
-                <div class="form-group"> <label>Titular de la Unidad</label>
-                  <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Oficina"> </div>
-                <div class="form-group"> <label>Nombre de Oficina</label>
-                  <input id="oficina" type="text" class="form-control" value="" placeholder="Nombre de Oficina"> </div>
+                <div class="form-group"> <label>Titular de la Unidad Responsable</label>
+                  <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Unidad Responsable"> </div>
                 <div class="form-group"> <label>Calle</label>
                   <input id="calle" type="text" class="form-control" value="" placeholder="Calle"> </div>
                 <div class="form-group"> <label>No Int</label>
-                  <input id="numint" type="text" class="form-control" value="" placeholder="No Int y Ext"> </div>
+                  <input id="numint" type="text" class="form-control" value="" placeholder="No Int"> </div>
                 <div class="form-group"> <label>No Ext</label>
-                  <input id="numext" type="text" class="form-control" value="" placeholder="No Int y Ext"> </div>
+                  <input id="numext" type="text" class="form-control" value="" placeholder="No Ext"> </div>
                 <div class="form-group"> <label>Colonia</label>
                   <input id="colonia" type="text" class="form-control" value="" placeholder="Colonia"> </div>
                 <div class="form-group"> <label>Municipio</label>
@@ -324,8 +318,8 @@
               <input data-id="calle" type="text" class="form-control oficina-form" placeholder="Calle"> </div>
             <div class="form-group"> <label>No  Ext</label>
               <input data-id="numext" type="text" class="form-control oficina-form" placeholder="No  Ext"> </div>
-              <div class="form-group"> <label>No  Ext</label>
-              <input data-id="numint" type="text" class="form-control oficina-form" placeholder="No  Ext"> </div>
+              <div class="form-group"> <label>No  Int</label>
+              <input data-id="numint" type="text" class="form-control oficina-form" placeholder="No  Int"> </div>
             <div class="form-group"> <label>Colonia</label>
               <input data-id="colonia" type="text" class="form-control oficina-form" placeholder="Colonia"> </div>
             <div class="form-group"> <label>Municipio</label>
@@ -342,6 +336,9 @@
               <input data-id="mail" type="email" class="form-control oficina-form" placeholder="Correo Electrónico"> </div>
             <div class="form-group"> <label>Horario de Atención</label>
               <input data-id="horario" type="text" class="form-control oficina-form" placeholder="Horario de Atención"> </div>
+
+              <div class="form-group"> <label>Municipios que atiende</label>
+              <input data-id="municipios_a" type="text" class="form-control oficina-form" placeholder="Municipios que atiende"> </div>
    <div class="form-group"> <label></label>
               <input data-id="tipo" type="hidden" class="form-control oficina-form" placeholder="Tipo" value="otro"> </div>
           <button id="oficina-add" class="btn btn-primary" href="#">Agregar </button>
@@ -374,6 +371,7 @@
                 <th>Extensión</th>
                 <th>Email</th>
                 <th>Horario de Atención</th>
+                <th>Municipios que Atiende</th>
                 <th>Editar</th>
                 <th>Borrar</th>
                
@@ -409,9 +407,9 @@
                 <div class="form-group"> <label>Calle</label>
                   <input id="calle" type="text" class="form-control" value="" placeholder="Calle"> </div>
                 <div class="form-group"> <label>No Int</label>
-                  <input id="numint" type="text" class="form-control" value="" placeholder="No Int y Ext"> </div>
+                  <input id="numint" type="text" class="form-control" value="" placeholder="No Int"> </div>
                 <div class="form-group"> <label>No Ext</label>
-                  <input id="numext" type="text" class="form-control" value="" placeholder="No Int y Ext"> </div>
+                  <input id="numext" type="text" class="form-control" value="" placeholder="No Ext"> </div>
                 <div class="form-group"> <label>Colonia</label>
                   <input id="colonia" type="text" class="form-control" value="" placeholder="Colonia"> </div>
                 <div class="form-group"> <label>Municipio</label>
@@ -429,8 +427,11 @@
                   <input id="mail" type="text" class="form-control" value="" placeholder="Email"> </div>
                 <div class="form-group"> <label>Horario de Atención</label>
                   <input id="horario" type="text" class="form-control" value="" placeholder="Horario de Atención"> </div>
-               <div class="form-group"> <label>Tipo</label>
+                  <div class="form-group"> <label>Municipios que atiende</label>
+                  <input id="municipios_a" type="text" class="form-control" value="" placeholder="Municipios que atiende"> </div>
+               <div class="form-group"> <label></label>
                   <input id="tipo" type="hidden" class="form-control" value="otro" placeholder="Tipo"> </div>
+                
             </div>
           </div>
         </div>

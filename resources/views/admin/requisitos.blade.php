@@ -36,14 +36,20 @@
           <div class="form-group"> <label>Ley</label>
             <input type="text" data-id="ley" class="form-control requisito-form" placeholder="Ley"> </div>
         </div>
-        <div class="col-md-2">
+        <!--<div class="col-md-2">
           <div class="form-group"> <label>Fundamento legal</label>
-            <input type="text" data-id="fundamento" class="form-control requisito-form" placeholder="Fundamento Legal"> </div>
-        </div>
+            <input type="hidden" data-id="fundamento" class="form-control requisito-form" placeholder="Fundamento Legal"> </div>
+        </div>-->
         <div class="col-md-2">
           <div class="form-group"> <label>Persona</label>
-            <input type="text" data-id="tipo" class="form-control requisito-form" placeholder="Persona"> </div>
+            <select data-id="tipo" name="tipo" class="form-control requisito-form"  >
+                  <option value="Personas Físicas">Personas Físicas</option>      
+                  <option value="Personas Morales">Personas Morales</option>      
+                  <option value="Instituciones Públicas">Instituciones Públicas</option>      
+
+            </select>
         </div>
+          </div>
         <div class="col-md-2">
           <div class="form-group"><label>Agregar</label>
             <button id="requisito-add" style="display:block" href="#" class="btn btn-primary">+</button>
@@ -140,7 +146,16 @@
             </div>
             <div class="col-md-3">
               <div class="form-group"> <label>Persona</label>
-                <input id="tipo" type="text" class="form-control" value="" placeholder="Persona"> </div>
+
+            <select id="tipo" name="tipo" class="form-control requisito-form">
+                  <option value="Personas Físicas">Personas Físicas</option>      
+                  <option value="Personas Morales">Personas Morales</option>      
+                  <option value="Instituciones Públicas">Instituciones Públicas</option>      
+
+            </select>
+
+
+              </div>
             </div>
           </div>
         </div>

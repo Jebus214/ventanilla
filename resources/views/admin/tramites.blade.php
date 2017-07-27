@@ -24,6 +24,7 @@
       <li role="presentation"><a href="#requisitos" aria-controls="requisitos" data-toggle="tab">Requisitos</a></li>
       <li role="presentation"><a href="#oficinas" aria-controls="oficinas" data-toggle="tab">Oficinas</a></li>
       <li role="presentation"><a href="#preguntas" aria-controls="preguntas" data-toggle="tab">Preguntas Frecuentes</a></li>
+      <li role="presentation"><a href="#validacion" aria-controls="validacion" data-toggle="tab">Validación</a></li>
   </ul>
 
 
@@ -37,10 +38,10 @@
   @include('admin/main')
 
     @include('admin/fundamento')
-
   @include('admin/requisitos')
   @include('admin/oficinas')
   @include('admin/preguntas')
+    @include('admin/validacion')
 
  </div>
 

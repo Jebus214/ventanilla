@@ -307,7 +307,6 @@ bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitosEditModa
 
 bindTable("OficinaDependenciaTable",$('#OficinaDependenciaTable').attr('data-tramiteId'),"oficinaDependenciaEditModal","oficinaDependencia",[
                     {"data":"titular"},
-                    {"data":"oficina"},
                     {"data":"calle"},
                     {"data":"numint"},
                     {"data":"numext"},
@@ -326,7 +325,6 @@ bindTable("OficinaDependenciaTable",$('#OficinaDependenciaTable').attr('data-tra
 
 bindTable("OficinaUnidadTable",$('#OficinaUnidadTable').attr('data-tramiteId'),"oficinaUnidadEditModal","oficinaUnidad",[
                     {"data":"titular"},
-                    {"data":"oficina"},
                     {"data":"calle"},
                     {"data":"numint"},
                     {"data":"numext"},
@@ -358,7 +356,8 @@ bindTable("OficinaTable",$('#OficinaTable').attr('data-tramiteId'),"oficinaEditM
                     {"data":"telefono"},  
                     {"data":"extension"},
                     {"data":"mail"}, 
-                    {"data":"horario"},     
+                    {"data":"horario"},      
+                    {"data":"municipios_a"},  
                   
                   
                     ]);

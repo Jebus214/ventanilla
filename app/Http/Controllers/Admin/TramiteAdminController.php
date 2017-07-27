@@ -60,7 +60,7 @@ class TramiteAdminController extends Controller
 
 				$unidad->update(['nombre'=>$unidadNew]);
 
-        // return response()->json(['mensaje'=>$request]);
+      // return response()->json(['mensaje'=>$request]);
     	return redirect('/admin/tramites/'.$id);
 
     }
