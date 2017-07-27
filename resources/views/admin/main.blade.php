@@ -6,14 +6,14 @@
           <form action="{{ url('/admin/update/tramites/'.$tramites->id) }}" method="POST">
               {{ csrf_field() }}
             
+              <div class="form-group"> <label>Nombre</label>
+              <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $tramites->nombre }}"> </div>
               
             <div class="form-group"> <label>Unidad</label>
               <input type="text" name="unidad_nombre" class="form-control" placeholder="Dependencia" value="{{ $tramites->unidad->nombre }}"> </div>
 
-              <div class="form-group"> <label>Nombre</label>
-              <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $tramites->nombre }}"> </div>
-            <div class="form-group"> <label>Nombre</label>
-              <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $tramites->nombre }}"> </div>
+              
+            
             <div class="form-group"> <label>Descripción</label>
               <textarea type="text" name="descripcion" class="form-control" placeholder="Descripción" value="">{{ $tramites->descripcion }}</textarea> </div>
             <div class="form-group"> <label>Casos en que el trámite debe realizarse</label>
@@ -51,7 +51,7 @@
               <input type="text" name="elabora" class="form-control" placeholder="Elabora" value="{{ $tramites->elabora}}"> </div>
 
             <div class="form-group"> <label>Revisa</label>
-              <input type="text" name="reviza" class="form-control" placeholder="Revisa" value="{{ $tramites->reviza}}"> </div>      
+              <input type="text" name="revisa" class="form-control" placeholder="Revisa" value="{{ $tramites->revisa}}"> </div>      
            
            <div class="form-group"> <label>Autoriza</label>
               <input type="text" name="autoriza" class="form-control" placeholder="Autoriza" value="{{ $tramites->autoriza}}"> </div>

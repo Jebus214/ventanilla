@@ -23,7 +23,7 @@
                   <th>unidad</th>
                   <th>Ultima actualiación</th>
                   <th>Editar</th>
-                  <th>Borrar</th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -37,9 +37,7 @@
                   <td>
                     <a href="/admin/tramites/{{$tramite->id}}" class="btn btn-primary" >Editar</a>
                   </td>
-                  <td>
-                    <a href="#" class="btn btn-danger">Borrar</a>
-                  </td>
+                  
                 </tr>
                        @endforeach
               </tbody>
