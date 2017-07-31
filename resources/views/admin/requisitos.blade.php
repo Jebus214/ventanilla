@@ -103,7 +103,7 @@
 
 
 
-    <div class="modal" id="requisitosEditModal">
+    <div class="modal" id="requisitoEditModal">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">

@@ -10,9 +10,18 @@
 <script>
   
 
-
 $(document).ready(function(){
 
+$body = $("body");
+
+
+$(document).on({
+
+  ajaxStart: function() { $body.addClass("loading");    },
+  ajaxStop: function() { $body.removeClass("loading"); },  
+ajaxError:function(){alert('Error luck....');}
+
+});
 
 
 
@@ -203,7 +212,9 @@ $('#'+resourceName+'-save').click(function(e){
 
                       $.ajaxSetup({headers: {'X-CSRF-Token': $('#_token').val()}});
                       $.post( "/api/"+resourceName+"/"+formData.id,formData).done(function(){
-                          loadModalRequisitos(formData.id);
+                          //loadModalRequisitos(formData.id);
+                            $("#"+resourceName+"EditModal .close").click()
+
                       });
 
 
@@ -292,7 +303,7 @@ $('#'+resourceName+'-add').click(function(e){
 } );
 
 
-bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitosEditModal","requisito",[ 
+bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitoEditModal","requisito",[ 
                     {"data":"descripcion"},
                     {"data":"original"},
                     {"data":"copia"},

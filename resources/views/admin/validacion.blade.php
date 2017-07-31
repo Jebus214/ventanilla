@@ -14,6 +14,8 @@
                                           <div class="form-group"> <label>Autoriza</label>
                                             <input type="text" name="autoriza" class="form-control" placeholder="Autoriza" value="{{ $tramites->autoriza}}"> </div>
 
+
+
                                             <button type="submit" class="btn btn-primary" href="#">Guardar </button>
 
     </form>
