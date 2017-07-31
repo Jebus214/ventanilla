@@ -108,7 +108,7 @@
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
                 
                 <div class="form-group"> <label>Titular de la Dependencia</label>
-                  <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Oficina"> </div>
+                  <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Dependencia"> </div>
                 
                 <div class="form-group"> <label>Calle</label>
                   <input id="calle" type="text" class="form-control" value="" placeholder="Calle"> </div>
@@ -157,7 +157,7 @@
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          Agregar Titular de la Unidad
+          Agregar Titular de la Unidad Administrativa Responsable
         </a>
       </h4>
     </div>
@@ -165,8 +165,8 @@
       <div class="panel-body">
             <div  class="form-group"> 
                 <input data-id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
-            <div class="form-group"> <label>Titular de la Unidad</label>
-              <input data-id="titular" type="text" class="form-control oficinaUnidad-form" placeholder="Titular de la Oficina"> </div>
+            <div class="form-group"> <label>Titular de la Unidad Administrativa Responsable</label>
+              <input data-id="titular" type="text" class="form-control oficinaUnidad-form" placeholder="Titular de la Unidad Administrativa Responsable"> </div>
             
             <div class="form-group"> <label>Calle</label>
               <input data-id="calle" type="text" class="form-control oficinaUnidad-form" placeholder="Calle"> </div>
@@ -210,7 +210,7 @@
             <thead>
               <tr>
        
-                <th>Titular de la Unidad</th>
+                <th>Titular de la Unidad Administrativa Responsable</th>
                 
                 <th>Calle</th>
                 <th>No Int</th>
@@ -251,8 +251,8 @@
                 <div  class="form-group"> 
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
                 
-                <div class="form-group"> <label>Titular de la Unidad Responsable</label>
-                  <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Unidad Responsable"> </div>
+                <div class="form-group"> <label>Titular de la Unidad Administrativa Responsable</label>
+                  <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Unidad Administrativa Responsable"> </div>
                 <div class="form-group"> <label>Calle</label>
                   <input id="calle" type="text" class="form-control" value="" placeholder="Calle"> </div>
                 <div class="form-group"> <label>No Int</label>
@@ -311,7 +311,7 @@
             <div  class="form-group"> 
                 <input data-id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
             <div class="form-group"> <label>Responsable de la Oficina</label>
-              <input data-id="titular" type="text" class="form-control oficina-form" placeholder="Titular de la Oficina"> </div>
+              <input data-id="titular" type="text" class="form-control oficina-form" placeholder="Responsable de la Oficina"> </div>
             <div class="form-group"> <label>Nombre de Oficina</label>
               <input data-id="oficina" type="text" class="form-control oficina-form" placeholder="Nombre de Oficina"> </div>
             <div class="form-group"> <label>Calle</label>
@@ -401,7 +401,7 @@
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
                 
                 <div class="form-group"> <label>Responsable de la Oficina</label>
-                  <input id="titular" type="text" class="form-control" value="" placeholder="Titular de la Oficina"> </div>
+                  <input id="titular" type="text" class="form-control" value="" placeholder="Responsable de la Oficina"> </div>
                 <div class="form-group"> <label>Nombre de Oficina</label>
                   <input id="oficina" type="text" class="form-control" value="" placeholder="Nombre de Oficina"> </div>
                 <div class="form-group"> <label>Calle</label>

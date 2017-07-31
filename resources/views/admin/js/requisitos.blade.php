@@ -292,13 +292,12 @@ $('#'+resourceName+'-add').click(function(e){
 } );
 
 
-bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitosEditModal","requisito",[  {"data":"descripcion"},
+bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitosEditModal","requisito",[ 
+                    {"data":"descripcion"},
                     {"data":"original"},
                     {"data":"copia"},
                     {"data":"articulo"},
-                    {"data":"fraccion"},
-                    {"data":"ley"},
-                    {"data":"fundamento"},
+               
                     {"data":"tipo"},                  
                     ]);
 
@@ -379,8 +378,7 @@ bindTable("preguntaTable",$('#preguntaTable').attr('data-tramiteId'),"preguntaEd
 
 bindTable("fundamentoTable",$('#fundamentoTable').attr('data-tramiteId'),"fundamentoEditModal","fundamento",[
                      {"data":"articulo"},
-                     {"data":"fraccion"},          
-                     {"data":"ley"},
+                 
                     
                     ]);
 

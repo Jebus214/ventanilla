@@ -48,7 +48,7 @@ class TramiteAdminController extends Controller
     {
 
 
-  	$unidadNew = $request->input('unidad_nombre');
+  	//$unidadNew = $request->input('unidad_nombre');
 
 
 
@@ -56,9 +56,9 @@ class TramiteAdminController extends Controller
 
 			$tramite=Tramite::findOrFail($id);
 
-				$unidad=unidad::findOrFail($tramite->unidad->id);
+				//$unidad=unidad::findOrFail($tramite->unidad->id);
 
-				$unidad->update(['nombre'=>$unidadNew]);
+				//$unidad->update(['nombre'=>$unidadNew]);
 
       // return response()->json(['mensaje'=>$request]);
     	return redirect('/admin/tramites/'.$id);

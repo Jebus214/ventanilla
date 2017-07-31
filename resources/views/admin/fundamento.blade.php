@@ -8,14 +8,14 @@
     <div class="row">
       <div class="col-md-8">
           <div class="form-group"> 
-            <input data-id="articulo" type="text" class="form-control fundamento-form" placeholder="Artículo"> </div>
+            <input data-id="articulo" type="text" class="form-control fundamento-form" placeholder="Fundamento"> </div>
 
-          <div class="form-group"> 
+          <!--<div class="form-group"> 
             <input data-id="fraccion" type="text" class="form-control fundamento-form" placeholder="Fracción"> </div>
             
             <div class="form-group"> 
             <input data-id="ley" type="text" class="form-control fundamento-form" placeholder="Ley"> </div>  
-            
+            -->
 
           </div>
           <div class="col-md-4">
@@ -34,10 +34,10 @@
             <thead>
               <tr>
 
-                  <th>Artículo </th>
-                  <th>Fracción </th>
+                  <th>Fundamento </th>
+                  <!--<th>Fracción </th>
                   <th>Ley</th>
-
+-->
                   <th>Editar</th>
                   <th>Borrar</th>
                
@@ -63,13 +63,13 @@
               <div  class="form-group"> 
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
 
-                      <div class="form-group"> <label>Artículo</label>
-                        <input id="articulo" type="text" class="form-control" placeholder="fundamento"> </div>
-                        <div class="form-group"> <label>Fracción</label>
+                      <div class="form-group"> <label>Fundamento</label>
+                        <input id="articulo" type="text" class="form-control" placeholder="Fundamento"> </div>
+                        <!--<div class="form-group"> <label>Fracción</label>
                         <input id="fraccion" type="text" class="form-control" placeholder="fundamento"> </div>
                         <div class="form-group"> <label>Ley</label>
                         <input id="ley" type="text" class="form-control" placeholder="fundamento"> </div>
-                      
+                      -->
 
 
                 

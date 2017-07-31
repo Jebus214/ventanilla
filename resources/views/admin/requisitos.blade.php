@@ -25,10 +25,10 @@
             <input type="text" data-id="copias" class="form-control requisito-form" placeholder="Copias"> </div>
         </div>
         <div class="col-md-2">
-          <div class="form-group"> <label>Artículo</label>
+          <div class="form-group"> <label>Fundamento</label>
             <input type="text" data-id="articulo" class="form-control requisito-form" placeholder="Artículo"> </div>
         </div>
-        <div class="col-md-2">
+          <!-- <div class="col-md-2">
           <div class="form-group"> <label>Fracción</label>
             <input type="text" data-id="fraccion" class="form-control requisito-form" placeholder="Fracción"> </div>
         </div>
@@ -77,11 +77,9 @@
                 <th>Requisito </th>
                 <th>Original</th>
                 <th>Copias</th>
-                <th>Artículo</th>
+                <th>Fundamento</th>
 
-                <th>Fracción</th>
-
-                <th>Ley</th>
+               
 
                 <th>Fundamento Legal </th>
                 <th>Persona</th>
@@ -129,10 +127,10 @@
                 <input id="copia" type="text" class="form-control" value="" placeholder="Copias"> </div>
             </div>
             <div class="col-md-3">
-              <div class="form-group"> <label>Artículo</label>
+              <div class="form-group"> <label>Fundamento</label>
                 <input id="articulo" type="text" class="form-control" value="" placeholder="Artículo"> </div>
             </div>
-            <div class="col-md-3">
+            <!--<div class="col-md-3">
               <div class="form-group"> <label>Fracción</label>
                 <input id="fraccion" type="text" class="form-control" value="" placeholder="Fracción"> </div>
             </div>
@@ -143,7 +141,7 @@
             <div class="col-md-3">
               <div class="form-group"> <label>Fundamento legal</label>
                 <textarea id="fundamento" type="text" class="form-control" value="" placeholder="Fundamento Legal"></textarea></div>
-            </div>
+            </div>-->
             <div class="col-md-3">
               <div class="form-group"> <label>Persona</label>
 

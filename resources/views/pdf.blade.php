@@ -116,9 +116,9 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
 <table class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 "100%"
  style='border-collapse:collapse;border:none'>
  <tr style='height:19.75pt'>
-  <td "100%" colspan=17 valign=top style='width:397.45pt;border-top:double 1.5pt;
+  <td  colspan=17 valign=top style='width:397.45pt;border-top:double 1.5pt;
   border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
-  border-color:windowtext;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;
+  border-color:windowtext;background:#92D050;padding:0cm 2.85pt 0cm 1pt;
   height:19.75pt'>
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
   3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
@@ -126,7 +126,7 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
   </td>
   <td colspan=2 valign=top style='width:35.4pt;border-top:double windowtext 1.5pt;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;height:19.75pt'>
+  background:#92D050;padding:0cm 2.85pt 0cm 1pt;height:19.75pt'>
   <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
   margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
   style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>TRÁMITE:</span></p>
@@ -134,23 +134,23 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
   margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
   style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
   </td>
-  <td 67 valign=top style='width:20.0pt;border-top:double windowtext 1.5pt;
+  <td  valign=top style='width:20.0pt;border-top:double windowtext 1.5pt;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 2.85pt 0cm 2.85pt;height:19.75pt'>
+  padding:0cm 2.85pt 0cm 1pt;height:19.75pt'>
   <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
   margin-bottom:3.0pt;margin-left:0cm;text-align:center'><b><span
   style='font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></b></p>
   </td>
-  <td 146 valign=top style='width:43.8pt;border-top:double windowtext 1.5pt;
+  <td  valign=top style='width:43.8pt;border-top:double windowtext 1.5pt;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;height:19.75pt'>
+  background:#92D050;padding:0cm 2.85pt 0cm 1pt;height:19.75pt'>
   <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
   margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
   style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>SERVICIO:</span></p>
   </td>
-  <td 57 valign=top style='width:17.1pt;border-top:double windowtext 1.5pt;
+  <td  valign=top style='width:17.1pt;border-top:double windowtext 1.5pt;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
-  padding:0cm 2.85pt 0cm 2.85pt;height:19.75pt'>
+  padding:0cm 2.85pt 0cm 1pt;height:19.75pt'>
   <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
   margin-bottom:3.0pt;margin-left:0cm;text-align:center'><b><span
   style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>X</span></b></p>
@@ -160,14 +160,52 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
  <tr style='height:23.1pt'>
   <td  colspan=22 style='width:513.75pt;border-top:none;border-left:
   double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
-  double windowtext 1.5pt;padding:0cm 2.85pt 0cm 2.85pt;height:23.1pt'>
+  double windowtext 1.5pt;padding:0cm 2.85pt 0cm 1pt;height:23.1pt'>
   <p class=MsoListParagraph style='text-align:justify;text-autospace:none'><span
   style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->nombre}}</span></p>
   </td>
  </tr>
 
-
  
+ <tr>
+  <td  colspan=22 valign=top style='width:513.75pt;border-top:none;
+  border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;
+  border-right:double windowtext 1.5pt;background:#92D050;padding:0cm 2.85pt 0cm 1pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>DESCRIPCIÓN: </span></p>
+  </td>
+ </tr>
+ <tr style='height:66.9pt'>
+  <td  colspan=22 style='width:513.75pt;border-top:none;border-left:
+  double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  double windowtext 1.5pt;padding:0cm 2.85pt 0cm 1pt;height:66.9pt'>
+  <p class="MsoNormal" style='text-align:justify;text-autospace:none'><span
+  style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->descripcion}}</span></p>
+  </td>
+ </tr>
+ <tr style='height:31.85pt'>
+  <td  style='border-top:none;border-left:double windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 1pt 0cm 1pt;height:31.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>FUNDAMENTO LEGAL:</span></p>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td  colspan=21 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  background:white;padding:0cm 1pt 0cm 1pt;height:31.85pt'>
+                      @foreach ($tramites->fundamento as $fundamento)
+
+  <p class="MsoNormal" style='text-align:justify;text-autospace:none'><span
+  style='font-family:"Gill Sans MT",sans-serif'>{{$fundamento->articulo}}</span></p>
+                      @endforeach
+
+  </td>
+ </tr>
 </table>
 
 </div>

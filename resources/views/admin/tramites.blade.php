@@ -8,7 +8,7 @@
 @section('content')
 
 <ol class="breadcrumb">
-  <li><a href="/admin/tramites">Tamites</a></li>
+  <li><a href="/admin/tramites">Trámites</a></li>
   <li><a href="#">{{$tramites->nombre}}</a></li>
 </ol>
 

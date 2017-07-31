@@ -9,7 +9,8 @@
           <div class="form-group"> <label>Nombre</label>
             <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $tramites->nombre }}"> </div>
 
-
+<div class="form-group"> <label>Descripción</label>
+              <textarea type="text" name="descripcion" class="form-control" placeholder="Descripción" value="">{{ $tramites->descripcion }}</textarea> </div>
 <div class="form-group"> <label>Tipo</label>
                   <select  class="form-control" name="tipo" >
                      @if($tramites->tipo=="Servicio")
@@ -22,11 +23,10 @@
                   </select></div>
 
                   
-            <div class="form-group"> <label>Descripción</label>
-              <textarea type="text" name="descripcion" class="form-control" placeholder="Descripción" value="">{{ $tramites->descripcion }}</textarea> </div>
+            
 
-              <div class="form-group"> <label>Unidad</label>
-                <input type="text" name="unidad_nombre" class="form-control" placeholder="Dependencia" value="{{ $tramites->unidad->nombre }}"> </div>
+              <div class="form-group"> <label></label>
+                <input type="hidden" name="unidad_nombre" class="form-control" placeholder="Dependencia" value="{{ $tramites->unidad->nombre }}"> </div>
 
 
                 <div class="form-group"> <label>Rubro</label>
@@ -63,12 +63,12 @@
 
 
 
-                          <div class="form-group"> <label>Duración</label>
+                          <div class="form-group"> <label>Duración del trámite</label>
                             <input type="text" name="duracion" class="form-control" placeholder="duracion" value="{{ $tramites->duracion}}"> </div>           
                             <div class="form-group"> <label>Tiempo de respuesta</label>
                               <input type="text" name="tiempo_rep" class="form-control" placeholder="Tiempo de respuesta" value="{{ $tramites->tiempo_rep}}"> </div>
                               <div class="form-group"> <label>Costo</label>
-                                <input type="text" name="costos" class="form-control" placeholder="Costo" value="{{ $tramites->costo}}"> </div>
+                                <input type="text" name="costo" class="form-control" placeholder="Costo" value="{{ $tramites->costo}}"> </div>
 
                                 <div class="form-group"> <label>Forma de  Pagar</label>
                                   <input type="text" name="formapago" class="form-control" placeholder="Forma de  Pagar" value="{{ $tramites->formapago}}"> </div>
@@ -76,7 +76,7 @@
                                   <div class="form-group"> <label>Donde Pagar</label>
                                     <input type="text" name="dondepag" class="form-control" placeholder="Donde Pagar" value="{{ $tramites->dondepag}}"> </div>
 
-                                    <div class="form-group"> <label>Alternativas de pago</label>
+                                    <div class="form-group"> <label>Otras alternativas de pago</label>
                                     <input type="text" name="alternativa_pago" class="form-control" placeholder="Alternativas de pago" value="{{ $tramites->alternativa_pago}}"> </div>
 
 
@@ -84,7 +84,7 @@
                                     <div class="form-group"> <label>Criterios de resolución</label>
                                       <textarea type="text" name="criterios" class="form-control" placeholder="Descripción" value="">{{ $tramites->criterios }}</textarea> </div>            
 
-                                     
+                                     <button type="submit" class="btn btn-primary" href="#">Guardar </button>
 
                                           </form>
                                         </div>
