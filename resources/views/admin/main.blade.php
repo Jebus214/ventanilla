@@ -10,7 +10,7 @@
             <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $tramites->nombre }}"> </div>
 
 <div class="form-group"> <label>Descripción</label>
-              <textarea type="text" name="descripcion" class="form-control" placeholder="Descripción" value="">{{ $tramites->descripcion }}</textarea> </div>
+              <textarea rows="4" type="text" name="descripcion" class="form-control" placeholder="Descripción" value="">{{ $tramites->descripcion }}</textarea> </div>
 <div class="form-group"> <label>Tipo</label>
                   <select  class="form-control" name="tipo" >
                      @if($tramites->tipo=="Servicio")
@@ -82,7 +82,7 @@
 
 
                                     <div class="form-group"> <label>Criterios de resolución</label>
-                                      <textarea type="text" name="criterios" class="form-control" placeholder="Descripción" value="">{{ $tramites->criterios }}</textarea> </div>            
+                                      <textarea type="text" rows="5" name="criterios" class="form-control" placeholder="Descripción" value="">{{ $tramites->criterios }}</textarea> </div>            
 
                                      <button type="submit" class="btn btn-primary" href="#">Guardar </button>
 

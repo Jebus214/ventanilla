@@ -297,7 +297,7 @@ bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitosEditModa
                     {"data":"original"},
                     {"data":"copia"},
                     {"data":"articulo"},
-               
+                    
                     {"data":"tipo"},                  
                     ]);
 

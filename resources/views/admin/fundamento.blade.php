@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-8">
           <div class="form-group"> 
-            <input data-id="articulo" type="text" class="form-control fundamento-form" placeholder="Fundamento"> </div>
+            <textarea data-id="articulo" type="text" class="form-control fundamento-form" placeholder="Fundamento"></textarea> </div>
 
           <!--<div class="form-group"> 
             <input data-id="fraccion" type="text" class="form-control fundamento-form" placeholder="Fracción"> </div>
@@ -64,7 +64,7 @@
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
 
                       <div class="form-group"> <label>Fundamento</label>
-                        <input id="articulo" type="text" class="form-control" placeholder="Fundamento"> </div>
+                        <textarea id="articulo" type="text" class="form-control" placeholder="Fundamento"></textarea> </div>
                         <!--<div class="form-group"> <label>Fracción</label>
                         <input id="fraccion" type="text" class="form-control" placeholder="fundamento"> </div>
                         <div class="form-group"> <label>Ley</label>

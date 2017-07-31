@@ -11,7 +11,14 @@
           <div class="form-group"> <label>Descripción</label>
             <input type="text" data-id="descripcion" class="form-control requisito-form" placeholder="Descripción"> </div>
         </div>
+
+        <div class="col-md-12">
+          <div class="form-group"> <label>Fundamento</label>
+            <textarea type="text" data-id="articulo" class="form-control requisito-form" placeholder="Artículo"> </textarea></div>
+        </div>
       </div>
+
+
 
       <div class="row">
       
@@ -24,10 +31,7 @@
           <div class="form-group"> <label>Copias</label>
             <input type="text" data-id="copias" class="form-control requisito-form" placeholder="Copias"> </div>
         </div>
-        <div class="col-md-2">
-          <div class="form-group"> <label>Fundamento</label>
-            <input type="text" data-id="articulo" class="form-control requisito-form" placeholder="Artículo"> </div>
-        </div>
+        
           <!-- <div class="col-md-2">
           <div class="form-group"> <label>Fracción</label>
             <input type="text" data-id="fraccion" class="form-control requisito-form" placeholder="Fracción"> </div>
@@ -40,7 +44,7 @@
           <div class="form-group"> <label>Fundamento legal</label>
             <input type="hidden" data-id="fundamento" class="form-control requisito-form" placeholder="Fundamento Legal"> </div>
         </div>-->
-        <div class="col-md-2">
+        <div class="col-md-3">
           <div class="form-group"> <label>Persona</label>
             <select data-id="tipo" name="tipo" class="form-control requisito-form"  >
                   <option value="Personas Físicas">Personas Físicas</option>      
@@ -81,7 +85,6 @@
 
                
 
-                <th>Fundamento Legal </th>
                 <th>Persona</th>
                  <th>Editar</th>
                   <th>Borrar</th>
@@ -116,6 +119,14 @@
               <div  class="form-group"> <label>Requisito</label>
                 <input id="descripcion" type="text" class="form-control" value="" placeholder="Requisito"> </div>
             </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group"> <label>Fundamento</label>
+                <textarea id="articulo" type="text" class="form-control" value="" placeholder="Artículo"></textarea> </div>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3">
@@ -126,10 +137,7 @@
               <div class="form-group"> <label>Copias</label>
                 <input id="copia" type="text" class="form-control" value="" placeholder="Copias"> </div>
             </div>
-            <div class="col-md-3">
-              <div class="form-group"> <label>Fundamento</label>
-                <input id="articulo" type="text" class="form-control" value="" placeholder="Artículo"> </div>
-            </div>
+            
             <!--<div class="col-md-3">
               <div class="form-group"> <label>Fracción</label>
                 <input id="fraccion" type="text" class="form-control" value="" placeholder="Fracción"> </div>
