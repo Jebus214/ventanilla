@@ -5,9 +5,9 @@
     <div class="row">
       <div class="col-md-12">
           <div class="form-group"> <label>Pregunta</label>
-            <input data-id="pregunta" type="text" class="form-control pregunta-form" placeholder="Pregunta"> </div>
+            <textarea data-id="pregunta" type="text" class="form-control pregunta-form" placeholder="Pregunta"></textarea> </div>
             <div class="form-group"> <label>Respuesta</label>
-              <input data-id="respuesta" type="text" class="form-control pregunta-form" placeholder="Respuesta"> </div>
+              <textarea data-id="respuesta" type="text" class="form-control pregunta-form" placeholder="Respuesta"></textarea></div>
 
             <button id="pregunta-add" class="btn btn-primary" href="#">Agregar </button>
           </div>
@@ -50,9 +50,9 @@
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
 
                       <div class="form-group"> <label>Pregunta</label>
-                        <input id="pregunta" type="text" class="form-control" placeholder="Pregunta"> </div>
+                        <textarea id="pregunta" type="text" class="form-control" placeholder="Pregunta"></textarea> </div>
                       <div class="form-group"> <label>Respuesta</label>
-                        <input id="respuesta" type="text" class="form-control" placeholder="Respuesta"> </div>
+                        <textarea id="respuesta" type="text" class="form-control" placeholder="Respuesta"></textarea></div>
 
 
                 

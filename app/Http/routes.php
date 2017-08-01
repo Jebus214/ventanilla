@@ -96,9 +96,18 @@ Route::get('/pdfTest2/{id}',function($id){
 
   //$pdf->setOptions([ "defaultPaperSize" => "letter","defaultMediaType" => "full"]);
 
+$requisitos=$tramites->requisito()->get();
 
-  $pdf->setPaper('letter', 'portrait')->loadView('pdf', ['tramites' => $tramites,'rubros'=> $rubros]);
+//$requisitos_fisica= $requisitos->where('tipo','Personas Físicas');
+
+//$requisitos_morales
+
+
+
+
+  $pdf->setPaper('letter', 'portrait')->loadView('pdf', ['tramites' => $tramites,'rubros'=> $rubros,'requisito'=>'asd']);
   //$pdf->loadView('cedula_template');
+
 
 return $pdf->stream();
 

@@ -117,7 +117,7 @@
                 <input id="id" type="hidden" class="form-control" value="" placeholder="id"> </div>
                 
               <div  class="form-group"> <label>Requisito</label>
-                <input id="descripcion" type="text" class="form-control" value="" placeholder="Requisito"> </div>
+                <textarea id="descripcion" type="text" class="form-control" value="" placeholder="Requisito"></textarea> </div>
             </div>
 
           </div>
