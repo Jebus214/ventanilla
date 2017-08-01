@@ -5,6 +5,8 @@
 <meta name=Generator content="Microsoft Word 15 (filtered)">
 <style>
 
+
+
  /* Font Definitions */
  @font-face
   {font-family:"Cambria Math";
@@ -16,6 +18,12 @@
   {font-family:"Gill Sans MT";
   panose-1:2 11 5 2 2 1 4 2 2 3;}
  /* Style Definitions */
+
+.page-break {
+    page-break-after: always;
+}
+
+
  p.MsoNormal, li.MsoNormal, div.MsoNormal
   {margin-top:0cm;
   margin-right:0cm;
@@ -247,7 +255,7 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
 
 
 <tr>
-  <td  valign=top style='width:92.6pt;border-top:none;border-left:
+  <td  valign=top style='border-top:none;border-left:
   double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
   solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
@@ -256,7 +264,7 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
   3.0pt;margin-left:0cm'><b><span style='font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></b></p>
   </td>
-  <td  valign=top style='width:11.2pt;border-top:none;border-left:none;
+  <td  valign=top style='border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
@@ -275,7 +283,7 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
   
 
   </td>
-  <td  valign=top style='width:17.15pt;border-top:none;border-left:
+  <td  valign=top style='border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
@@ -293,14 +301,14 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
   
 
   </td>
-  <td  colspan=4 valign=top style='width:78.0pt;border-top:none;
+  <td  colspan=4 valign=top style='border-top:none;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
   3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
   font-family:"Gill Sans MT",sans-serif'>DIRECCIÓN WEB:</span></p>
   </td>
-  <td  colspan=15 valign=top style='width:314.8pt;border-top:none;
+  <td  colspan=15 valign=top style='border-top:none;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
   padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='text-align:center; margin-top:0.2cm;'><span style='font-family:"Gill Sans MT",sans-serif'>
@@ -311,7 +319,7 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
  </tr>
 
  <tr>
-  <td  colspan=4 style='width:170.6pt;border-top:none;border-left:
+  <td  colspan=4 style='border-top:none;border-left:
   double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
   solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
@@ -322,7 +330,7 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
   3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
   font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
   </td>
-  <td  colspan=18 style='width:343.15pt;border-top:none;border-left:
+  <td  colspan=18 style='border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
   background:white;padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
@@ -410,9 +418,402 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
  @endif
  @endforeach
 
-< /table>
+<tr style='height:5.5pt'>
+  <td  colspan=22 valign=top style='border-top:solid windowtext 1.0pt;
+  border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;
+  border-right:double windowtext 1.5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:5.5pt'>
+  <p class="MsoNormal" style='margin-top:2.0pt;margin-right:0cm;margin-bottom:
+  2.0pt;margin-left:0cm'><b><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>PERSONAS MORALES</span></b></p>
+  </td>
+ </tr>
+
+@foreach ($tramites->requisito as $requisito)
+ @if($requisito->tipo=='Personas Morales')
+ <tr style='height:1.0pt'>
+  <td  colspan=6 valign=top style='border-top:none;
+  border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt;height:
+  1.0pt'>
+  <p class="MsoNormal" style='text-align:justify;text-autospace:none'><span
+  style='font-family:"Gill Sans MT",sans-serif;color:black'>{{$requisito->descripcion}}</span></p>
+  </td>
+  <td colspan=3 valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span></p>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->original}}</span></p>
+  </td>
+  <td colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
+  <p class="MsoNormal" style='text-autospace:none'><span style='font-family:"Gill Sans MT",sans-serif;
+  color:black'> </span></p>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:.65pt;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$requisito->copia}}</span></p>
+  </td>
+  <td  colspan=10 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$requisito->articulo}}</span></p>
+  </td>
+ </tr>
+ @endif
+ @endforeach
 
 
+<tr style='height:8.6pt'>
+  <td  colspan=22 valign=top style='border-top:none;
+  border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;
+  border-right:double windowtext 1.5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:8.6pt'>
+  <p class="MsoNormal" style='margin-top:2.0pt;margin-right:0cm;margin-bottom:
+  2.0pt;margin-left:0cm'><b><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>INSTITUCIONES PÚBLICAS</span></b></p>
+  </td>
+ </tr>
+
+@foreach ($tramites->requisito as $requisito)
+ @if($requisito->tipo=='Instituciones Públicas')
+ <tr style='height:1.0pt'>
+  <td  colspan=6 valign=top style='border-top:none;
+  border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt;height:
+  1.0pt'>
+  <p class="MsoNormal" style='text-align:justify;text-autospace:none'><span
+  style='font-family:"Gill Sans MT",sans-serif;color:black'>{{$requisito->descripcion}}</span></p>
+  </td>
+  <td colspan=3 valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span></p>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->original}}</span></p>
+  </td>
+  <td colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
+  <p class="MsoNormal" style='text-autospace:none'><span style='font-family:"Gill Sans MT",sans-serif;
+  color:black'> </span></p>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:.65pt;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$requisito->copia}}</span></p>
+  </td>
+  <td  colspan=10 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$requisito->articulo}}</span></p>
+  </td>
+ </tr>
+ @endif
+ @endforeach
+
+<tr style='height:1.0pt'>
+  <td  colspan=22 valign=top style='border-top:none;
+  border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;
+  border-right:double windowtext 1.5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:2.0pt;margin-right:0cm;margin-bottom:
+  2.0pt;margin-left:0cm'><b><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>OTROS</span></b></p>
+  </td>
+ </tr>
+<tr style='height:1.0pt'>
+  <td  colspan=6 valign=top style='border-top:none;
+  border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt;height:
+  1.0pt'>
+  <p class="MsoNormal" style='text-align:justify;text-autospace:none'><span
+  style='font-family:"Gill Sans MT",sans-serif;color:black'></span></p>
+  </td>
+  <td colspan=3 valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span></p>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-family:"Gill Sans MT",sans-serif'></span></p>
+  </td>
+  <td colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
+  <p class="MsoNormal" style='text-autospace:none'><span style='font-family:"Gill Sans MT",sans-serif;
+  color:black'> </span></p>
+  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+  margin-bottom:4.0pt;margin-left:.65pt;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'></span></p>
+  </td>
+  <td  colspan=10 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif'></span></p>
+  </td>
+ </tr>
+<tr>
+  <td  valign=top style='border-top:none;border-left:
+  double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>DURACIÓN DEL TRÁMITE:</span></p>
+  </td>
+  <td  colspan=8 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='text-align:justify;text-autospace:none'><span
+  style='font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td  colspan=4 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>TIEMPO DE RESPUESTA:</span></p>
+  </td>
+  <td  colspan=9 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='text-align:justify;text-autospace:none'><span
+  style='font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+
+ <tr style='height:1.0pt'>
+  <td  valign=top style='border-top:none;border-left:
+  double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;
+  height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>VIGENCIA:</span></p>
+  </td>
+  <td  colspan=21 style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><b><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif;color:red'>&nbsp;</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td  valign=top style='border-top:none;border-left:
+  double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;
+  height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>COSTO:</span></p>
+  </td>
+  <td  colspan=21 style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+  justify;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+<tr style='height:1.0pt'>
+  <td  valign=top style='border-top:none;border-left:
+  double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;
+  height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>FORMA DE PAGO:</span></p>
+  </td>
+  <td  colspan=4 style='border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=right style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:right'><span style='font-size:
+  7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>EFECTIVO</span></p>
+  </td>
+  <td  style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:1.0pt'>
+  <p class="MsoNormal" align=right style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:right'><span style='font-size:
+  7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td  colspan=4 style='border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=right style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:right'><span style='font-size:
+  7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>TARJETA DE
+  CRÉDITO </span></p>
+  </td>
+  <td  style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:1.0pt'>
+  <p class="MsoNormal" align=right style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:right'><span style='font-size:
+  7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td  colspan=4 style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=right style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:right'><span style='font-size:
+  7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>TARJETA DE
+  DÉBITO</span></p>
+  </td>
+  <td  style='border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=right style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:right'><span style='font-size:
+  7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td  colspan=5 style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" align=right style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:right'><span style='font-size:
+  7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>EN LÍNEA
+  (PORTAL DE PAGOS)</span></p>
+  </td>
+  <td  style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:double windowtext 1.5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+
+ <tr style='height:1.0pt'>
+  <td  style='border-top:none;border-left:double windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>DÓNDE PODRÁ PAGARSE:</span></p>
+  </td>
+  <td  colspan=21 style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><b><span style='font-size:7.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif;color:red'>&nbsp;</span></b></p>
+  </td>
+ </tr>
+<tr style='height:1.0pt'>
+  <td  style='border-top:none;border-left:double windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>OTRAS ALTERNATIVAS:</span></p>
+  </td>
+  <td colspan=21 style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><b><span style='font-size:7.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif;color:red'>&nbsp;</span></b></p>
+  </td>
+ </tr>
+<tr style='height:1.0pt'>
+  <td  style='border-top:none;border-left:double windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>CRITERIOS DE RESOLUCION DEL TRAMITE</span></p>
+  </td>
+  <td  colspan=21 style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;line-height:normal'><b><span style='font-size:7.0pt;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td  colspan=22 style='border:double windowtext 1.5pt;
+  border-top:none;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:8.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>Cuando el particular realice una
+  petición por escrito a la autoridad respectiva, esta tendrá 15 días hábiles
+  para emitir una respuesta, tal y como lo establece el artículo 47 de la Ley
+  de Transparencia y Acceso a la información Pública del Estado de México y
+  Municipios, de lo contraria operara la <b>afirmativa ficta.</b></span></p>
+  </td>
+ </tr>
+</table>
+
+<div class="page-break"></div>
+
+
+<table class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='border-collapse:collapse;border:none'>
+<tr>
+  <td  colspan=11 style='border-top:double 1.5pt;
+  border-left:double windowtext 1.0pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+  border-color:windowtext;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>DEPENDENCIA U ORGANISMO:</span></p>
+  </td>
+  <td  colspan=4 style='border-top:double windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>UNIDAD ADMINISTRATIVA RESPONSABLE:</span></p>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+
+ <tr style='height:1.0pt'>
+  <td  colspan=11 style='border-top:solid 1.0pt;
+  border-left:double windowtext 1.0pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+  border-color:windowtext;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}</span></p>
+  </td>
+  <td  colspan=4 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:1.0pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span style='font-size:12.0pt;font-family:"Gill Sans MT",sans-serif'>{{$tramites->unidad->nombre}}</span></p>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+
+</table>
 
 
 </div>

@@ -68,7 +68,7 @@
                             <div class="form-group"> <label>Tiempo de respuesta</label>
                               <input type="text" name="tiempo_rep" class="form-control" placeholder="Tiempo de respuesta" value="{{ $tramites->tiempo_rep}}"> </div>
                               <div class="form-group"> <label>Costo</label>
-                                <input type="text" name="costo" class="form-control" placeholder="Costo" value="{{ $tramites->costo}}"> </div>
+                                <textarea type="text" name="costo" class="form-control" placeholder="Costo" value="">{{ $tramites->costo}}</textarea></div>
 
                                 <div class="form-group"> <label>Forma de  Pagar</label>
                                   <input type="text" name="formapago" class="form-control" placeholder="Forma de  Pagar" value="{{ $tramites->formapago}}"> </div>
