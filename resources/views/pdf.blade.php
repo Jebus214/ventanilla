@@ -813,37 +813,628 @@ style='font-family:"Gill Sans MT",sans-serif'>{{$tramites->dependencia->nombre}}
   </td>
  </tr>
 
+
+ 
+<tr>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>TITULAR DE LA DEPENDENCIA:</span></p>
+  </td>
+  <td  colspan=8 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><span style='font-size:7.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+@foreach ($tramites->oficina as $oficina)
+ @if($oficina->tipo=='dependencia')
+    {{$oficina->titular}}
+@endif
+@endforeach
+</span></p>
+  </td>
+ </tr>
+
+<tr>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>DOMICILIO:</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>CALLE:</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;background:
+  white;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>
+
+@foreach ($tramites->oficina as $oficina)
+ @if($oficina->tipo=='dependencia')
+    {{$oficina->calle}}
+@endif
+@endforeach
+
+</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>NO. INT. Y EXT.:</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+  @foreach ($tramites->oficina as $oficina)
+ @if($oficina->tipo=='dependencia')
+    {{$oficina->numint}} y {{$oficina->numext}}
+@endif
+@endforeach
+</span></p>
+  </td>
+ </tr>
+
+
+
+<tr>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>COLONIA:</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+    @foreach ($tramites->oficina as $oficina)
+ @if($oficina->tipo=='dependencia')
+    {{$oficina->colonia}}
+@endif
+@endforeach
+  </span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>MUNICI<span style='background:white'>P</span>IO:</span></p>
+  </td>
+  <td  colspan=4 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>Cuautitlán Izcalli</span></p>
+  </td>
+ </tr>
+
+
+ <tr>
+  <td  valign=top style='border-top:none;border-left:
+  double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.0pt;background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>C.P.:</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+    
+@foreach ($tramites->oficina as $oficina)
+ @if($oficina->tipo=='dependencia')
+    {{$oficina->CP}}
+@endif
+@endforeach
+
+  </span></p>
+  </td>
+  <td colspan=5 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;background:#92D050'>HORARIO Y DÍAS DE
+  ATENCIÓN</span><span style='font-size:7.0pt;line-height:115%;font-family:
+  "Gill Sans MT",sans-serif'>:</span></p>
+  </td>
+  <td colspan=6 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm;text-align:justify'><span style='font-size:7.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+    
+    @foreach ($tramites->oficina as $oficina)
+ @if($oficina->tipo=='dependencia')
+    {{$oficina->horario}}
+@endif
+@endforeach
+
+
+
+</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>LADA:</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>TELÉFONOS:</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>EXTS.:</span></p>
+  </td>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>FAX:</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>CORREO
+  ELECTRÓNICO:</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.15pt'>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt;height:
+  30.15pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span style='font-size:12.0pt;font-family:"Gill Sans MT",sans-serif'>
+
+
+
+    @foreach ($tramites->oficina as $oficina)
+     @if($oficina->tipo=='dependencia')
+        {{$oficina->lada}}
+    @endif
+    @endforeach
+
+</span></p>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+    
+
+
+  </span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='text-autospace:none'><span style='font-size:12.0pt;
+  line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+
+    @foreach ($tramites->oficina as $oficina)
+     @if($oficina->tipo=='dependencia')
+        {{$oficina->telefono}}
+    @endif
+    @endforeach
+
+
+
+</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span style='font-size:12.0pt;font-family:"Gill Sans MT",sans-serif'>
+
+    @foreach ($tramites->oficina as $oficina)
+     @if($oficina->tipo=='dependencia')
+        {{$oficina->extension}}
+    @endif
+    @endforeach
+
+
+</span></p>
+  </td>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span style='font-size:7.0pt;font-family:"Gill Sans MT",sans-serif'>
+
+No aplica
+
+
+
+</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>
+
+    @foreach ($tramites->oficina as $oficina)
+     @if($oficina->tipo=='dependencia')
+        {{$oficina->mail}}
+    @endif
+    @endforeach
+
+
+
+</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="100%" colspan=15 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:double windowtext 2.25pt;background:#E0E0E0;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><b><span
+  style='font-size:9.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'> OTRAS
+  OFICINAS QUE PRESTAN EL SERVICIO</span></b><b><span style='font-family:"Gill Sans MT",sans-serif'></span></b></p>
+  </td>
+ </tr>
+
+
+
+  @foreach ($tramites->oficina as $oficina)
+     @if($oficina->tipo=='otro')
+
+ <tr>
+
+
+  <td  colspan=6 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>OFICINA:</span></p>
+  </td>
+  <td  colspan=9 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$oficina->oficina}}</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td  colspan=8 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>NOMBRE DEL TITULAR DE LA OFICINA:</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+     {{$oficina->titular}}
+  </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>DOMICILIO:</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>CALLE:</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>{{$oficina->calle}}</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>NO. INT. Y EXT.:</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+    
+            {{$oficina->numint}} y {{$oficina->numext}} 
+
+  </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>COLONIA:</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$oficina->colonia}}</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>MUNICI<span style='background:white'>P</span>IO:</span></p>
+  </td>
+  <td  colspan=4 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+    
+    {{$oficina->municipio}}
+  </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td  valign=top style='border-top:none;border-left:
+  double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.0pt;background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>C.P.:</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>
+    {{$oficina->CP}}
+  </span></p>
+  </td>
+  <td colspan=5 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>HORARIO Y DÍAS DE ATENCIÓN:</span></p>
+  </td>
+  <td colspan=6 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-autospace:
+  none'><span style='font-size:12.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>{{$oficina->horario}}
+
+</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>LADA:</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>TELÉFONOS:</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>EXTS.:</span></p>
+  </td>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>FAX:</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><span
+  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>CORREO
+  ELECTRÓNICO:</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.15pt'>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt;height:
+  30.15pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span style='font-size:12.0pt;font-family:"Gill Sans MT",sans-serif;
+  color:black'>&nbsp;</span></p>
+  </td>
+  <td  colspan=7 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal;text-autospace:none'><span style='font-size:12.0pt;font-family:"Gill Sans MT",sans-serif;
+  color:black'>&nbsp;</span></p>
+  </td>
+  <td  valign=top style='border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td  colspan=2 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td  colspan=3 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:30.15pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:6.6pt'>
+  <td  colspan=5 style='border-top:none;border-left:double windowtext 2.25pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#92D050;padding:0cm 2.85pt 0cm 2.85pt;height:6.6pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>MUNICIPIOS QUE ATIENDE:</span></p>
+  </td>
+  <td  colspan=10 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:6.6pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+  justify;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+  @endif
+  
+@endforeach
+
+ 
+ <tr>
+  <td width="100%" colspan=15 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:double windowtext 2.25pt;background:#E0E0E0;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" align=center style='margin-top:3.0pt;margin-right:0cm;
+  margin-bottom:3.0pt;margin-left:0cm;text-align:center'><b><span
+  style='font-size:9.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>OTROS</span></b><b><span
+  style='font-family:"Gill Sans MT",sans-serif'></span></b></p>
+  </td>
+ </tr>
+ 
+@foreach($tramites->pregunta as $pregunta)
+ <tr>
+  <td  colspan=5 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;background:#92D050;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>PREGUNTA FRECUENTE :</span></p>
+  </td>
+  <td  colspan=10 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+  justify;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>{{$pregunta->pregunta}}</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td  colspan=5 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
+  3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif'>RESPUESTA:</span></p>
+  </td>
+  <td  colspan=10 valign=top style='border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+  justify;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>{{$pregunta->respuesta}}</span></p>
+  </td>
+ </tr>
+ @endforeach
+ 
+
 </table>
 
 
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+
+<table  class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 width="100%"
+ style=';border-collapse:collapse;border:none'>
+<tr >
+
+  <td  colspan=5 valign=top style='height:110.15pt; border-top:double windowtext 2.25pt;
+  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>Elaboro:</span></p>
+  </td>
+  <td  colspan=5 valign=top style='height:110.15pt; border-top:double windowtext 2.25pt;
+  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>Visto bueno:</span></p>
+  </td>
+  <td  colspan=5 valign=top style='height:110.15pt; border-top:double windowtext 2.25pt;
+  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>Autorizo:</span></p>
+  </td>
+ </tr>
+</table>
+
 </div>
 
-<p class="MsoNormal">&nbsp;</p>
 
-<p class="MsoNormal">&nbsp;</p>
-
-<div class="placeholderclass">
-
-
-
-</div>
-
-<p class="MsoNormal">&nbsp;</p>
-
-<p class="MsoNormal">&nbsp;</p>
-
-<div style="
-    width: 800px;
-    
-">
-
-
-
-</div>
-
-<p class="MsoNormal">&nbsp;</p>
-
-</div>
 
 </body>
 

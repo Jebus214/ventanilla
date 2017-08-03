@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-2">
           <div class="form-group"> <label>Copias</label>
-            <input type="text" data-id="copias" class="form-control requisito-form" placeholder="Copias"> </div>
+            <input type="text" data-id="copia" class="form-control requisito-form" placeholder="Copias"> </div>
         </div>
         
           <!-- <div class="col-md-2">
