@@ -1411,23 +1411,47 @@ No aplica
  style=';border-collapse:collapse;border:none'>
 <tr >
 
-  <td  colspan=5 valign=top style='height:110.15pt; border-top:double windowtext 2.25pt;
-  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  <td  colspan=5 valign=top style='height:130.15pt; border-top:double windowtext 2.25pt;
+  border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
   background:white;padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
   font-family:"Gill Sans MT",sans-serif;color:black'>Elaboro:</span></p>
   </td>
-  <td  colspan=5 valign=top style='height:110.15pt; border-top:double windowtext 2.25pt;
-  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  <td  colspan=5 valign=top style='height:130.15pt; border-top:double windowtext 2.25pt;
+  border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
   background:white;padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
   font-family:"Gill Sans MT",sans-serif;color:black'>Visto bueno:</span></p>
   </td>
-  <td  colspan=5 valign=top style='height:110.15pt; border-top:double windowtext 2.25pt;
-  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  <td  colspan=5 valign=top style='height:130.15pt; border-top:double windowtext 2.25pt;
+  border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
   background:white;padding:0cm 2.85pt 0cm 2.85pt'>
   <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
   font-family:"Gill Sans MT",sans-serif;color:black'>Autorizo:</span></p>
+  </td>
+ </tr>
+
+ <tr >
+
+  <td  colspan=5 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>Nombre Completo</span></p>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>Puesto</span></p>
+  </td>
+  <td  colspan=5 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>Nombre Completo</span></p>
+  </td>
+  <td  colspan=5 valign=top style='border-top:none;
+  border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
+  font-family:"Gill Sans MT",sans-serif;color:black'>Nombre Completo</span></p>
   </td>
  </tr>
 </table>
