@@ -85,6 +85,7 @@ console.log(deleteButtonColumnIndex);
                     
 
 var myDataTable=$('#'+tableId).DataTable( {
+   "pageLength": 200,
   "language":{
     "sProcessing":     "Procesando...",
     "sLengthMenu":     "Mostrar _MENU_ registros",

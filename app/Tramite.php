@@ -9,6 +9,10 @@ class Tramite extends Model
     //
     protected $fillable = ['dependecia_id','rubro_id','unidad_id','nombre','tipo','descripcion','fun_legal','doc_obtener','direccion_web','vigencia','duracion','casos','criterios','duracion','tiempo_rep','costo','formapago','dondepag','alternativa_pago','elabora','revisa','autoriza','vbpresidencia'];
 
+  // protected $appends = ['oficinaDepedencia','oficinaUnidad','oficinaOtros'];
+
+  protected $appends = ['oficinaDepedencia','oficinaUnidad','oficinaOtro'];
+
 
    	public function rubro() {
         return $this->belongsTo(Rubro::class);
@@ -43,6 +47,22 @@ class Tramite extends Model
           return $this->hasMany(Requisito::class);
      }
 
+     public function GetOficinaDepedenciaAttribute(){
+       return $this->oficina()->where('tipo', 'dependencia')->get();
+
+     }
+
+
+     public function GetOficinaUnidadAttribute(){
+       return $this->oficina()->where('tipo', 'unidad')->get();
+
+     }
+
+
+     public function GetOficinaOtroAttribute(){
+       return $this->oficina()->where('tipo', 'otro')->get();
+
+     }
 
 
 
