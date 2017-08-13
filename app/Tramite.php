@@ -11,7 +11,7 @@ class Tramite extends Model
 
   // protected $appends = ['oficinaDepedencia','oficinaUnidad','oficinaOtros'];
 
-  protected $appends = ['oficinaDepedencia','oficinaUnidad','oficinaOtro'];
+  protected $appends = ['oficinaDepedencia','oficinaUnidad','oficinaOtro','requisitosFisicas','requisitosMorales','requisitosInstituciones'];
 
 
    	public function rubro() {
@@ -62,6 +62,20 @@ class Tramite extends Model
      public function GetOficinaOtroAttribute(){
        return $this->oficina()->where('tipo', 'otro')->get();
 
+     }
+
+     public function GetRequisitosFisicasAttribute(){
+       return $this->requisito()->where('tipo', 'Personas Físicas')->get();
+
+     }
+
+     public function GetRequisitosMoralesAttribute(){
+       return $this->requisito()->where('tipo', 'Personas Morales')->get();
+
+     }
+
+     public function GetRequisitosInstitucionesAttribute(){
+       return $this->requisito()->where('tipo', 'Instituciones Públicas')->get();
      }
 
 
