@@ -87,6 +87,8 @@ return view('cedula_template');
 
 
 Route::get('/pdfTest2/{id}',function($id){
+  ini_set('max_execution_time', 300);
+  ini_set('memory_limit','1000M');
 
   $tramites = Tramite::findOrFail($id);
   $rubros=Rubro::orderBy('id', 'asc')->get();
