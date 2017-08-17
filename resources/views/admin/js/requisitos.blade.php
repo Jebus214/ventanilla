@@ -85,7 +85,6 @@ console.log(deleteButtonColumnIndex);
                     
 
 var myDataTable=$('#'+tableId).DataTable( {
-   "pageLength": 200,
   "language":{
     "sProcessing":     "Procesando...",
     "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -313,7 +312,7 @@ bindTable("dataTable",$('#dataTable').attr('data-tramiteId'),"requisitoEditModal
                     {"data":"tipo"},                  
                     ]);
 
-
+  
 
 
 bindTable("OficinaDependenciaTable",$('#OficinaDependenciaTable').attr('data-tramiteId'),"oficinaDependenciaEditModal","oficinaDependencia",[
@@ -390,6 +389,8 @@ bindTable("preguntaTable",$('#preguntaTable').attr('data-tramiteId'),"preguntaEd
 
 bindTable("fundamentoTable",$('#fundamentoTable').attr('data-tramiteId'),"fundamentoEditModal","fundamento",[
                      {"data":"articulo"},
+                     {"data":"fraccion"},
+                     {"data":"ley"},
                  
                     
                     ]);

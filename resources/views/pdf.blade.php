@@ -103,6 +103,7 @@
   font-size:7.0pt;
   line-height:115%;
   font-family:"Gill Sans MT",sans-serif;
+  font-weight: bold; 
 }
 
 
@@ -118,14 +119,15 @@
 
 .c-col-2{
   display:  inline-block;
-  width: 5%;
+  width: 15%;
 
 
 }
 
 .c-col-10{
+  margin-left: 30px;
   display:  inline-block;
-  width: 95%;
+  width: 60%;
 
 
 
@@ -220,14 +222,18 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal
       <div class="c-row">
         <div class="c-col-2">
 
-          <img src="img/logo.png" style="width:150px" alt="">
+          <img src="img/logo2.png" style="width:150px" alt="">
 
         </div>
         <div class="c-col-10">
           <p class="MsoNormal" align=center style='text-align:center'><b><span style='font-family:"Gill Sans MT",sans-serif'>CÉDULA DE INFORMACIÓN DE TRÁMITES<br>
             Y SERVICIOS MUNICIPALES</span></b></p>
           </div>
+        <div class="c-col-2">
 
+          <img src="img/logo.png" style="width:150px" alt="">
+
+        </div>
         </div>
 
 
@@ -257,11 +263,11 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal
                 <td  colspan=2 class="normal-table-td exterior-top">
                   <p class="MsoNormal p-content">
                     <b>
-                    <span style='s-content'>
-                      @if($tramites->tipo=='Trámite')
-                      X
-                      @endif
-                    </span>
+                      <span style='s-content'>
+                        @if($tramites->tipo=='Trámite')
+                        X
+                        @endif
+                      </span>
                     </b>
                   </p>
                 </td>
@@ -275,11 +281,11 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal
                 <td  class="normal-table-td exterior-top exterior-right">
                   <p class="MsoNormal p-content">
                     <b>
-                    <span class="s-content">
-                      @if($tramites->tipo=='Servicio')
-                      X
-                      @endif
-                    </span>
+                      <span class="s-content">
+                        @if($tramites->tipo=='Servicio')
+                        X
+                        @endif
+                      </span>
                     </b>
                   </p>
                 </td>
@@ -353,249 +359,251 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal
 
 
                     <td colspan=4  class="normal-table-td green">
-                      <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:
-                      3.0pt;margin-left:0cm'><span style='font-size:7.0pt;line-height:115%;
-                      font-family:"Gill Sans MT",sans-serif'>VIGENCIA: </span></p>
+                      <p class="MsoNormal p-title">
+                        <span class="s-title">
+                          VIGENCIA: 
+                        </span>
+                      </p>
                     </td>
 
                     <td colspan=4 class="normal-table-td  exterior-right">
-                      <p class="MsoNormal" style='text-align:center; margin-top:3.0pt;margin-right:0cm;margin-bottom:
-                      3.0pt;margin-left:0cm'>
-                      <span style='font-family:"Gill Sans MT",sans-serif'>
-                        {{$tramites->vigencia}}
-                      </span>
-                    </p>
-                  </td>
-
-                </tr>
-
-
-
-                <tr>
-                  <td  class="normal-table-td green exterior-left">
-                    <p class="MsoNormal p-title">
-                      <span class="s-title">¿SE REALIZA EN LÍNEA?:</span>
-                    </p>
-
-                  </td>
-                  <td  class="normal-table-td ">
-                    <p class="MsoNormal p-content" >
-                      <span class="s-title">
-                        SI 
-                      </span>
-                    </p>
-
-                    @if($tramites->direccion_web=='No aplica')
-                    <p class="MsoNormal p-content"><b>
-                      <span  class="s-content">
-                        <br>
-                      </span></b></p>                                                                                  
-                      @else
-                      <p class="MsoNormal p-content"><b>
-                        <span  class="s-content">X</span></b></p>
-                        @endif
-
-
-                      </td>
-                      <td  class="normal-table-td ">
-                        <p class="MsoNormal p-content" >
-                          <span class="s-title">NO</span>
-                        </p>
-                        @if($tramites->direccion_web=='No aplica')
-                        <p class="MsoNormal p-content">
-                          <b>
-                            <span  class="s-content">
-                              X
-                            </span>
-                          </b>
-                        </p>                                                                                  
-                        @else
-                        <p class="MsoNormal p-content">
-                          <b>
-                            <span  class="s-content"> 
-                              <br>
-                            </span>
-                          </b>
-                        </p>
-                        @endif
-
-
-                      </td>
-                      <td  colspan=4 class="normal-table-td gray">
-                        <p class="MsoNormal p-title"><span class="s-title">
-                          DIRECCIÓN WEB:
+                      <p class="MsoNormal p-content">
+                        <span class="s-content">
+                          {{$tramites->vigencia}}
                         </span>
                       </p>
                     </td>
-                    <td  colspan=15 class="normal-table-td exterior-right">
-                      <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;margin-left:0.5cm'>
 
-                        <span style='font-family:"Gill Sans MT",sans-serif'>
-                          {{$tramites->direccion_web}}
+                  </tr>
 
-                        </span></p>
-                      </td>
-                    </tr>
 
-                    <tr>
-                      <td  colspan=4 class="normal-table-td green exterior-left">
-                        <p class="MsoNormal p-title"><span class="s-title">
-                          CASOS EN LOS QUE EL TRÁMITE DEBE
-                          REALIZARSE:</span>
-                        </p>
 
-                      </td>
-                      <td  colspan=18 class="normal-table-td  exterior-right">
-                        <p class="MsoNormal p-content">
-                          <span class="s-content">
+                  <tr>
+                    <td  class="normal-table-td green exterior-left">
+                      <p class="MsoNormal p-title">
+                        <span class="s-title">¿SE REALIZA EN LÍNEA?:</span>
+                      </p>
 
-                            {{$tramites->casos}}
-                          </span>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan=12 class="normal-table-td green exterior-left">
-                        <p class="MsoNormal p-title p-centrar">
-                          <span class="s-title">
-                            REQUISITOS:
-                          </span>
-                        </p>
-                      </td>
-                      <td  colspan=10 class="normal-table-td green exterior-right">
-                        <p class="MsoNormal p-title p-centrar">
-                         <span class="s-title">
-                          FUNDAMENTO
-                          JURÍDICO-ADMINISTRATIVO, <br>
-                          UTILIDAD Y DESTINO DEL REQUISITO:
+                    </td>
+                    <td  class="normal-table-td ">
+                      <p class="MsoNormal p-content" >
+                        <span class="s-title">
+                          SI 
                         </span>
+                      </p>
+
+                      @if($tramites->direccion_web=='No aplica' or $tramites->direccion_web=='No aplica ' or $tramites->direccion_web==' No aplica')
+                      <p class="MsoNormal p-content"><b>
+                        <span  class="s-content">
+                          <br>
+                        </span></b></p>                                                                                  
+                        @else
+                        <p class="MsoNormal p-content"><b>
+                          <span  class="s-content">X</span></b></p>
+                          @endif
+
+
+                        </td>
+                        <td  class="normal-table-td ">
+                          <p class="MsoNormal p-content" >
+                            <span class="s-title">NO</span>
+                          </p>
+                        
+                      @if($tramites->direccion_web=='No aplica' or $tramites->direccion_web=='No aplica ' or $tramites->direccion_web==' No aplica')
+                          <p class="MsoNormal p-content">
+                            <b>
+                              <span  class="s-content">
+                                X
+                              </span>
+                            </b>
+                          </p>                                                                                  
+                          @else
+                          <p class="MsoNormal p-content">
+                            <b>
+                              <span  class="s-content"> 
+                                <br>
+                              </span>
+                            </b>
+                          </p>
+                          @endif
+
+
+                        </td>
+                        <td  colspan=4 class="normal-table-td green">
+                          <p class="MsoNormal p-title"><span class="s-title">
+                            DIRECCIÓN WEB:
+                          </span>
+                        </p>
+                      </td>
+                      <td  colspan=15 class="normal-table-td exterior-right">
+                        <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;margin-left:0.5cm'>
+
+                          <span style='font-family:"Gill Sans MT",sans-serif'>
+                            {{$tramites->direccion_web}}
+
+                          </span></p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td  colspan=4 class="normal-table-td green exterior-left">
+                          <p class="MsoNormal p-title"><span class="s-title">
+                            CASOS EN LOS QUE EL TRÁMITE DEBE
+                            REALIZARSE:</span>
+                          </p>
+
+                        </td>
+                        <td  colspan=18 class="normal-table-td  exterior-right">
+                          <p class="MsoNormal p-content">
+                            <span class="s-content">
+
+                              {{$tramites->casos}}
+                            </span>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan=12 class="normal-table-td green exterior-left">
+                          <p class="MsoNormal p-title p-centrar">
+                            <span class="s-title">
+                              REQUISITOS:
+                            </span>
+                          </p>
+                        </td>
+                        <td  colspan=10 class="normal-table-td green exterior-right">
+                          <p class="MsoNormal p-title p-centrar">
+                           <span class="s-title">
+                            FUNDAMENTO
+                            JURÍDICO-ADMINISTRATIVO, <br>
+                            UTILIDAD Y DESTINO DEL REQUISITO:
+                          </span>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr style='height:11.4pt'>
+                      <td  colspan=22 class="normal-table-td gray exterior-right exterior-left">
+                        <p class="MsoNormal p-title p-centrar"><b>
+                          <span class="s-title">
+                            PERSONAS FÍSICAS
+                          </span>
+                        </b>
                       </p>
                     </td>
                   </tr>
-                  <tr style='height:11.4pt'>
-                    <td  colspan=22 class="normal-table-td gray exterior-right exterior-left">
-                      <p class="MsoNormal p-title"><b>
-                        <span class="s-title">
-                          PERSONAS FÍSICAS
-                        </span>
-                      </b>
+                  @forelse ($tramites->requisitosFisicas as $requisito)
+
+                  <tr style='height:1.0pt'>
+                    <td  colspan=6 class="normal-table-td  exterior-left">
+                      <p class="MsoNormal p-content"><span class="s-content" >
+                        {{$requisito->descripcion}}
+                      </span>
                     </p>
                   </td>
-                </tr>
-                @forelse ($tramites->requisitosFisicas as $requisito)
 
-                <tr style='height:1.0pt'>
-                  <td  colspan=6 class="normal-table-td  exterior-left">
-                    <p class="MsoNormal p-content"><span class="s-content" >
-                      {{$requisito->descripcion}}
-                    </span>
+                  <td colspan=3 class="normal-table-td">
+                    <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+                    margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+                    style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span>
                   </p>
+                  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+                  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+                  style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->original}}</span></p>
                 </td>
-
                 <td colspan=3 class="normal-table-td">
                   <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
                   margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-                  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span>
-                </p>
-                <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-                margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-                style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->original}}</span></p>
-              </td>
-              <td colspan=3 class="normal-table-td">
-                <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-                margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-                style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
-                <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-                margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-                style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->copia}}</span></p>
-              </td>
-              <td  colspan=10 class="normal-table-td  exterior-right">
-                <p class="MsoNormal p-content" >
-                  <span class="s-content">
-                    {{$requisito->articulo}}
+                  style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
+                  <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+                  margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+                  style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->copia}}</span></p>
+                </td>
+                <td  colspan=10 class="normal-table-td  exterior-right">
+                  <p class="MsoNormal p-content" >
+                    <span class="s-content">
+                      {{$requisito->articulo}}
+                    </span>
+                  </p>
+                </td>
+              </tr>
+
+              @empty
+              <tr style='height:1.0pt'>
+                <td  colspan=6 class="normal-table-td  exterior-left">
+                  <p class="MsoNormal p-content"><span class="s-content" >
+                    No aplica
                   </span>
                 </p>
               </td>
-            </tr>
 
-            @empty
-            <tr style='height:1.0pt'>
-              <td  colspan=6 class="normal-table-td  exterior-left">
-                <p class="MsoNormal p-content"><span class="s-content" >
-                  No aplica
-                </span>
+              <td colspan=3 class="normal-table-td">
+                <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+                margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+                style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span>
               </p>
+              <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+              margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+              style='font-family:"Gill Sans MT",sans-serif'></span></p>
             </td>
-
             <td colspan=3 class="normal-table-td">
               <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
               margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-              style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span>
+              style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
+              <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+              margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+              style='font-family:"Gill Sans MT",sans-serif'></span></p>
+            </td>
+            <td  colspan=10 class="normal-table-td  exterior-right">
+             <p class="MsoNormal p-content" >
+              <span class="s-content">
+                No aplica
+              </span>
             </p>
-            <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-            margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-            style='font-family:"Gill Sans MT",sans-serif'></span></p>
           </td>
-          <td colspan=3 class="normal-table-td">
-            <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-            margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-            style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
-            <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-            margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-            style='font-family:"Gill Sans MT",sans-serif'></span></p>
-          </td>
-          <td  colspan=10 class="normal-table-td  exterior-right">
-           <p class="MsoNormal p-content" >
-            <span class="s-content">
-              No aplica
-            </span>
+        </tr>                         
+        @endforelse
+
+        <tr style='height:5.5pt'>
+          <td  colspan=22 class="normal-table-td  gray exterior-right exterior-left">
+            <p class="MsoNormal p-title p-centrar"><b>
+              <span class="s-title">PERSONAS JURÍDICAS COLECTIVAS</span>
+            </b>
           </p>
         </td>
-      </tr>                         
-      @endforelse
+      </tr>
 
-      <tr style='height:5.5pt'>
-        <td  colspan=22 class="normal-table-td  gray exterior-right exterior-left">
-          <p class="MsoNormal p-title"><b>
-            <span class="s-title">PERSONAS MORALES</span>
-          </b>
+      @forelse ($tramites->requisitosMorales as $requisito)
+      <tr style='height:1.0pt'>
+        <td  colspan=6 class="normal-table-td  exterior-left">
+          <p class="MsoNormal p-content"><span class="s-content" >
+            {{$requisito->descripcion}}
+          </span>
         </p>
       </td>
-    </tr>
 
-    @forelse ($tramites->requisitosMorales as $requisito)
-    <tr style='height:1.0pt'>
-      <td  colspan=6 class="normal-table-td  exterior-left">
-        <p class="MsoNormal p-content"><span class="s-content" >
-          {{$requisito->descripcion}}
-        </span>
+      <td colspan=3 class="normal-table-td">
+        <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+        margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+        style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span>
       </p>
+      <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+      margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+      style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->original}}</span></p>
     </td>
-
     <td colspan=3 class="normal-table-td">
       <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
       margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-      style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>ORIGINAL</span>
+      style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
+      <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
+      margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
+      style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->copia}}</span></p>
+    </td>
+    <td  colspan=10 class="normal-table-td  exterior-right">
+     <p class="MsoNormal p-content" >
+      <span class="s-content">
+        {{$requisito->articulo}}
+      </span>
     </p>
-    <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-    margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-    style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->original}}</span></p>
   </td>
-  <td colspan=3 class="normal-table-td">
-    <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-    margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-    style='font-size:7.0pt;line-height:115%;font-family:"Gill Sans MT",sans-serif'>COPIA(S)</span></p>
-    <p class="MsoNormal" align=center style='margin-top:4.0pt;margin-right:0cm;
-    margin-bottom:4.0pt;margin-left:0cm;text-align:center'><span
-    style='font-family:"Gill Sans MT",sans-serif'>{{$requisito->copia}}</span></p>
-  </td>
-  <td  colspan=10 class="normal-table-td  exterior-right">
-   <p class="MsoNormal p-content" >
-    <span class="s-content">
-      {{$requisito->articulo}}
-    </span>
-  </p>
-</td>
 </tr>
 
 @empty
@@ -639,7 +647,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 
 <tr style='height:5.5pt'>
   <td  colspan=22 class="normal-table-td gray  exterior-right exterior-left">
-    <p class="MsoNormal p-title"><b>
+    <p class="MsoNormal p-title p-centrar"><b>
       <span class="s-title">INSTITUCIONES PÚBLICAS</span>
     </b>
   </p>
@@ -721,7 +729,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 
 <tr style='height:5.5pt'>
   <td  colspan=22 class="normal-table-td gray exterior-right exterior-left">
-    <p class="MsoNormal p-title"><b>
+    <p class="MsoNormal p-title p-centrar"><b>
       <span class="s-title">OTROS</span>
     </b>
   </p>
@@ -840,8 +848,14 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   </td>
   <td  class="normal-table-td">
     <p class="MsoNormal p-content">
-      <span class="s-content">&nbsp;
-      </span></p>
+      <span class="s-content">
+        @if($tramites->formaDePago["efectivo"]==1)
+          <b>X</b>
+        @else
+          &nbsp;
+        @endif
+      </span>
+    </p>
     </td>
     <td  colspan=4 class="normal-table-td gray">
       <p class="MsoNormal p-title"><span class="s-title">TARJETA DE
@@ -849,7 +863,13 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
       </td>
       <td  class="normal-table-td">
         <p class="MsoNormal p-content">
-          <span class="s-content">&nbsp;</span>
+          <span class="s-content">
+           @if($tramites->formaDePago["credito"]==1)
+              <b>X</b>
+            @else
+                &nbsp;
+            @endif
+          </span>
         </p>
       </td>
       <td  colspan=4 class="normal-table-td gray">
@@ -862,7 +882,11 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
       <td  class="normal-table-td">
         <p class="MsoNormal p-content">
           <span class="s-content">
-            &nbsp;
+             @if($tramites->formaDePago["debito"]==1)
+              <b>X</b>
+            @else
+                &nbsp;
+            @endif
           </span>
         </p>
       </td>
@@ -926,60 +950,36 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
         </p>
       </td>
     </tr>
-    <tr style='height:1.0pt'>
-      <td colspan=22  class="normal-table-td green exterior-left exterior-right exterior-bottom">
-        <p class="MsoNormal p-title">
-          <span class="s-title">
-            Cuando el particular realice una petición por escrito a la autoridad respectiva, esta tendrá 15 días hábiles para emitir una respuesta, tal y como lo establece el artículo 47 de la Ley de Transparencia y Acceso a la información Pública del Estado de México y Municipios, de lo contraria operara la <b>afirmativa ficta.</b>
-
-          </span>
-        </p>
-      </td>
-    </tr>
+    
   </table>
 
-  <div class="page-break"></div>
+
+
+<p class="MsoNormal">&nbsp;</p>
 
 
   <table  class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 width="100%"
   style=';border-collapse:collapse;border:none'>
 
   <tr>
-    <td  colspan=5 class="normal-table-td green exterior-left  exterior-top">
+    <td  colspan=15 class="normal-table-td green exterior-left exterior-right  exterior-top">
       <p class="MsoNormal p-title">
-        <span class="s-title">
+        <span class="s-title p-centrar">
           DEPENDENCIA U ORGANISMO:
         </span>
       </p>
-    </td>
-
-    <td  colspan=10 class="normal-table-td green exterior-right  exterior-top">
-      <p class="MsoNormal p-title">
-        <span class="s-title">
-          UNIDAD ADMINISTRATIVA RESPONSABLE:
-        </span>
-      </p>
-    </td>
+    </td>    
   </tr>
+
   <tr style='height:1.0pt'>
-    <td  colspan=5 class="normal-table-td  exterior-left">
-      <p class="MsoNormal p-content">
+    <td  colspan=15 class="normal-table-td exterior-left exterior-right">
+      <p class="MsoNormal p-content p-centrar">
         <span class="s-content">
           {{$tramites->dependencia->nombre}}
         </span>
       </p>
     </td>
-    <td  colspan=10 class="normal-table-td  exterior-right">
-      <p class="MsoNormal p-content">
-        <span class="s-content">
-          {{$tramites->unidad->nombre}}
-        </span>
-      </p>
-
-    </td>
   </tr>
-
-
 
   <tr>
     <td  colspan=4 class="normal-table-td green exterior-left">
@@ -999,8 +999,45 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
    </td>
  </tr>
 
- <tr>
+  <tr>
+    <td  colspan=15 class="normal-table-td green exterior-left exterior-right">
+      <p class="MsoNormal p-title p-centrar">
+        <span class="s-title">
+          UNIDAD ADMINISTRATIVA RESPONSABLE:
+        </span>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td  colspan=15 class="normal-table-td  exterior-left exterior-right  ">
+      <p class="MsoNormal p-content p-centrar">
+        <span class="s-content">
+          {{$tramites->puesto_elabora}}
+        </span>
+      </p>
 
+    </td>
+  </tr>
+<tr>
+    <td  colspan=4 class="normal-table-td green exterior-left">
+      <p class="MsoNormal p-title">
+        <span class="s-title">
+          TITULAR DE LA UNIDAD ADMINISTRATIVA RESPONSABLE:
+        </span>
+      </p>
+    </td>
+    <td  colspan=11 class="normal-table-td  exterior-right">
+      <p class="MsoNormal p-content">
+        <span class="s-content">
+
+         {{$tramites->oficinaUnidad[0]->titular}}
+       </span>
+     </p>
+   </td>
+ </tr>
+  
+
+ <tr>
   <td  class="normal-table-td green exterior-left">
     <p class="MsoNormal p-title">
       <span class="s-title">
@@ -1014,14 +1051,14 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
       </span>
     </p>
   </td>
-  <td  colspan=5 class="normal-table-td">
+  <td  colspan=6 class="normal-table-td">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$tramites->oficinaDepedencia[0]->calle}}
+       {{$tramites->oficinaUnidad[0]->calle}}
      </span>
    </p>
  </td>
- <td  colspan=2 class="normal-table-td gray">
+ <td   class="normal-table-td gray">
   <p class="MsoNormal p-title">
     <span class="s-title">
       NO. INT:
@@ -1031,23 +1068,23 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td  colspan=2 class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$tramites->oficinaDepedencia[0]->numint}}
+     {{$tramites->oficinaUnidad[0]->numint}}
 
    </span>
  </p>
 </td>
 
-<td colspan=2 class="normal-table-td gray">
+<td  class="normal-table-td gray">
   <p class="MsoNormal p-title">
     <span class="s-title">
       NO. EXT:
     </span>
   </p>
 </td>
-<td   colspan=2 class="normal-table-td exterior-right">
+<td   colspan=3 class="normal-table-td exterior-right">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$tramites->oficinaDepedencia[0]->numext}}
+     {{$tramites->oficinaUnidad[0]->numext}}
 
    </span>
  </p>
@@ -1056,17 +1093,17 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 </tr>
 
 <tr>
-  <td  colspan=2 class="normal-table-td gray exterior-left">
+  <td   class="normal-table-td gray exterior-left">
     <p class="MsoNormal p-title">
       <span class="s-title">
         COLONIA:
       </span>
     </p>
   </td>
-  <td  colspan=4 class="normal-table-td">
+  <td  colspan=8 class="normal-table-td">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$tramites->oficinaDepedencia[0]->colonia}}
+       {{$tramites->oficinaUnidad[0]->colonia}}
      </span>
    </p>
  </td>
@@ -1077,7 +1114,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
     </span>
   </p>
 </td>
-<td  colspan=7 class="normal-table-td exterior-right">
+<td  colspan=4 class="normal-table-td exterior-right">
   <p class="MsoNormal p-content">
     <span class="s-content">
       Cuautitlán Izcalli
@@ -1097,7 +1134,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   <td  colspan=3  class="normal-table-td">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$tramites->oficinaDepedencia[0]->CP}}
+       {{$tramites->oficinaUnidad[0]->CP}}
 
      </span>
    </p>
@@ -1114,7 +1151,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td colspan=6 class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$tramites->oficinaDepedencia[0]->horario}}
+     {{$tramites->oficinaUnidad[0]->horario}}
    </span>
  </p>
 </td>
@@ -1163,7 +1200,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   <td  class="normal-table-td exterior-left">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$tramites->oficinaDepedencia[0]->lada}}
+       {{$tramites->oficinaUnidad[0]->lada}}
 
      </span>
    </p>
@@ -1172,7 +1209,11 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
  <td colspan=8 class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$tramites->oficinaDepedencia[0]->telefono}}
+
+     {{str_replace('"','',$tramites->oficinaUnidad[0]->telefono)}}
+
+
+
    </span>
  </p>
 </td>
@@ -1180,10 +1221,10 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td  class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$tramites->oficinaDepedencia[0]->extension}}
+      {{str_replace('"','',$tramites->oficinaUnidad[0]->extension)}}
 
-   </span>
- </p>
+    </span>
+  </p>
 </td>
 
 <td  colspan=2 class="normal-table-td">
@@ -1198,7 +1239,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td  colspan=3 class="normal-table-td exterior-right">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$tramites->oficinaDepedencia[0]->mail}}
+     {{$tramites->oficinaUnidad[0]->mail}}
    </span>
  </p>
 </td>
@@ -1221,8 +1262,26 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 </tr>
 
 
+@for ($i = 0; $i < count($tramites->oficinaOtro); $i++)
 
-@forelse ($tramites->oficinaOtro as $oficina)
+@if(count($tramites->oficinaOtro)>1)
+
+<tr>
+  <td colspan=15 class="normal-table-td gray exterior-right exterior-left">
+    <p class="MsoNormal p-content p-centrar">
+      <b>
+        <span class="s-content">
+          OFICINA {{$i+1}}:
+        </span>
+      </b>
+    </p>
+  </td>
+</tr>
+
+@endif
+
+
+
 
 <tr>
 
@@ -1238,7 +1297,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   <td  colspan=9 class="normal-table-td  exterior-right">
     <p class="MsoNormal p-content">
       <span class="s-content">
-        {{$oficina->oficina}}
+        {{$tramites->oficinaOtro[$i]->oficina}}
       </span>
     </p>
   </td>
@@ -1256,7 +1315,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
     <p class="MsoNormal p-content">
       <span class="s-content">
 
-       {{$oficina->titular}}
+       {{$tramites->oficinaOtro[$i]->titular}}
      </span>
    </p>
  </td>
@@ -1277,14 +1336,14 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
       </span>
     </p>
   </td>
-  <td  colspan=5 class="normal-table-td">
+  <td  colspan=6 class="normal-table-td">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$oficina->calle}}
+       {{$tramites->oficinaOtro[$i]->calle}}
      </span>
    </p>
  </td>
- <td  colspan=2 class="normal-table-td gray">
+ <td   class="normal-table-td gray">
   <p class="MsoNormal p-title">
     <span class="s-title">
       NO. INT:
@@ -1294,23 +1353,23 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td  colspan=2 class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$oficina->numint}}
+     {{$tramites->oficinaOtro[$i]->numint}}
 
    </span>
  </p>
 </td>
 
-<td colspan=2 class="normal-table-td gray">
+<td  class="normal-table-td gray">
   <p class="MsoNormal p-title">
     <span class="s-title">
       NO. EXT:
     </span>
   </p>
 </td>
-<td   colspan=2 class="normal-table-td exterior-right">
+<td   colspan=3 class="normal-table-td exterior-right">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$oficina->numext}}
+     {{$tramites->oficinaOtro[$i]->numext}}
 
    </span>
  </p>
@@ -1319,17 +1378,17 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 </tr>
 
 <tr>
-  <td  colspan=2 class="normal-table-td gray exterior-left">
+  <td   class="normal-table-td gray exterior-left">
     <p class="MsoNormal p-title">
       <span class="s-title">
         COLONIA:
       </span>
     </p>
   </td>
-  <td  colspan=4 class="normal-table-td">
+  <td  colspan=8 class="normal-table-td">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$oficina->colonia}}
+       {{$tramites->oficinaOtro[$i]->colonia}}
      </span>
    </p>
  </td>
@@ -1340,7 +1399,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
     </span>
   </p>
 </td>
-<td  colspan=7 class="normal-table-td exterior-right">
+<td  colspan=4 class="normal-table-td exterior-right">
   <p class="MsoNormal p-content">
     <span class="s-content">
       Cuautitlán Izcalli
@@ -1360,7 +1419,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   <td  colspan=3  class="normal-table-td">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$oficina->CP}}
+       {{$tramites->oficinaOtro[$i]->CP}}
 
      </span>
    </p>
@@ -1377,7 +1436,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td colspan=6 class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$oficina->horario}}
+     {{$tramites->oficinaOtro[$i]->horario}}
    </span>
  </p>
 </td>
@@ -1426,7 +1485,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   <td  class="normal-table-td exterior-left">
     <p class="MsoNormal p-content">
       <span class="s-content">
-       {{$oficina->lada}}
+       {{$tramites->oficinaOtro[$i]->lada}}
 
      </span>
    </p>
@@ -1435,7 +1494,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
  <td colspan=8 class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$oficina->telefono}}
+     {{$tramites->oficinaOtro[$i]->telefono}}
    </span>
  </p>
 </td>
@@ -1443,7 +1502,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td  class="normal-table-td">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$oficina->extension}}
+     {{$tramites->oficinaOtro[$i]->extension}}
    </span>
  </p>
 </td>
@@ -1460,7 +1519,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <td  colspan=3 class="normal-table-td exterior-right">
   <p class="MsoNormal p-content">
     <span class="s-content">
-     {{$oficina->mail}}
+     {{$tramites->oficinaOtro[$i]->mail}}
    </span>
  </p>
 </td>
@@ -1481,14 +1540,24 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   <td  colspan=10 class="normal-table-td  exterior-right">
     <p class="MsoNormal p-content">
       <span class="s-content">
-        {{$oficina->municipios_a}}
+        {{$tramites->oficinaOtro[$i]->municipios_a}}
 
       </span>
     </p>
   </td>
 </tr>
 
-@empty
+
+
+
+@endfor
+
+
+
+
+
+@if(count($tramites->oficinaOtro)==0)
+
 
 <tr>
 
@@ -1543,14 +1612,14 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
       </span>
     </p>
   </td>
-  <td  colspan=5 class="normal-table-td">
+  <td  colspan=6 class="normal-table-td">
     <p class="MsoNormal p-content">
       <span class="s-content">
         No aplica
       </span>
     </p>
   </td>
-  <td  colspan=2 class="normal-table-td gray">
+  <td  colspan=1 class="normal-table-td gray">
     <p class="MsoNormal p-title">
       <span class="s-title">
         NO. INT:
@@ -1566,14 +1635,14 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
     </p>
   </td>
 
-  <td colspan=2 class="normal-table-td gray">
+  <td  class="normal-table-td gray">
     <p class="MsoNormal p-title">
       <span class="s-title">
         NO. EXT:
       </span>
     </p>
   </td>
-  <td   colspan=2 class="normal-table-td exterior-right">
+  <td   colspan=3 class="normal-table-td exterior-right">
     <p class="MsoNormal p-content">
       <span class="s-content">
         No aplica
@@ -1609,7 +1678,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   <td  colspan=7 class="normal-table-td exterior-right">
     <p class="MsoNormal p-content">
       <span class="s-content">
-        Cuautitlán Izcalli
+        No aplica
       </span>
     </p>
   </td>
@@ -1753,9 +1822,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   </td>
 </tr>
 
-
-@endforelse
-
+@endif
 
 
 <tr>
@@ -1763,7 +1830,7 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
     <p class="MsoNormal p-content p-centrar">
       <b>
         <span class="s-content">
-          OTROS
+          PREGUNTAS FRECUENTES
         </span>
       </b>
     </p>
@@ -1812,31 +1879,41 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 
 <p class="MsoNormal">&nbsp;</p>
 
-<p class="MsoNormal">&nbsp;</p>
+
+
 
 
 <table  class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 width="100%"
 style=';border-collapse:collapse;border:none'>
 <tr >
 
-  <td  colspan=5 valign=top style='height:130.15pt; border-top:double windowtext 2.25pt;
+  <td  colspan=5 valign=top style='height:50.15pt; border-top:double windowtext 2.25pt;
   border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
   background:white;padding:0cm 2.85pt 0cm 2.85pt'>
-  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-    font-family:"Gill Sans MT",sans-serif;color:black'>Elaboro:</span></p>
-  </td>
-  <td  colspan=5 valign=top style='height:130.15pt; border-top:double windowtext 2.25pt;
-  border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
-  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
-  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-    font-family:"Gill Sans MT",sans-serif;color:black'>Visto bueno:</span></p>
-  </td>
-  <td  colspan=5 valign=top style='height:130.15pt; border-top:double windowtext 2.25pt;
-  border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
-  background:white;padding:0cm 2.85pt 0cm 2.85pt'>
-  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-    font-family:"Gill Sans MT",sans-serif;color:black'>Autorizo:</span></p>
-  </td>
+  <p class="MsoNormal p-content p-centrar">
+    <span style='s-content'>
+      ELABORÓ:
+    </span>
+  </p>
+</td>
+<td  colspan=5 valign=top style='height:50.15pt; border-top:double windowtext 2.25pt;
+border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
+background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class="MsoNormal p-content p-centrar">
+  <span style='s-content'>
+    VISTO BUENO:
+  </span>
+</p>
+</td>
+<td  colspan=5 valign=top style='height:50.15pt; border-top:double windowtext 2.25pt;
+border-left:double windowtext 2.25pt;border-bottom:none;border-right:double windowtext 2.25pt;
+background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class="MsoNormal p-content p-centrar">
+  <span style='s-content'>
+    AUTORIZÓ:
+  </span>
+</p>
+</td>
 </tr>
 
 <tr >
@@ -1844,49 +1921,73 @@ style=';border-collapse:collapse;border:none'>
   <td  colspan=5 valign=top style='border-top:none;
   border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
   background:white;padding:0cm 2.85pt 0cm 2.85pt'>
-  <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-    font-family:"Gill Sans MT",sans-serif;color:black'><u>{{$tramites->elabora}}</u></span></p>
-    <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-      font-family:"Gill Sans MT",sans-serif;color:black'>Puesto</span></p>
-    </td>
-    <td  colspan=5 valign=top style='border-top:none;
-    border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
-    background:white;padding:0cm 2.85pt 0cm 2.85pt'>
-    <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-      font-family:"Gill Sans MT",sans-serif;color:black'><u>{{$tramites->revisa}}</u></span></p>
-      <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-        font-family:"Gill Sans MT",sans-serif;color:black'>Puesto</span></p>
-      </td>
-      <td  colspan=5 valign=top style='border-top:none;
-      border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
-      background:white;padding:0cm 2.85pt 0cm 2.85pt'>
-      <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-        font-family:"Gill Sans MT",sans-serif;color:black'><u>{{$tramites->autoriza}}</u></span></p>
-        <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-          font-family:"Gill Sans MT",sans-serif;color:black'>Puesto</span></p>
-        </td>
-      </tr>
+  <p class="MsoNormal p-content p-centrar">
+    <span style='s-content'>
+      <u>{{$tramites->elabora}}</u>
+    </span>
+  </p>
+  <p class="MsoNormal p-content p-centrar">
+    <span style='s-content'>
+       {{$tramites->tituloElabora}}
+    </span>
+  </p>
+</td>
+<td  colspan=5 valign=top style='border-top:none;
+border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class="MsoNormal p-content p-centrar">
+  <span style='s-content'>
+    <u>{{$tramites->revisa}}</u>
+  </span>
+</p>
+<p class="MsoNormal p-content p-centrar">
+  <span style='s-content'>
+       {{$tramites->tituloRevisa}}
+  </span>
+</p>
+</td>
+<td  colspan=5 valign=top style='border-top:none;
+border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
+background:white;padding:0cm 2.85pt 0cm 2.85pt'>
+<p class="MsoNormal p-content p-centrar">
+  <span style='s-content'>
+    <u>{{$tramites->autoriza}}
+    </u>
+  </span>
+</p>
+<p class="MsoNormal p-content p-centrar">
+  <span style='s-content'>
+    {{$tramites->tituloAutoriza}}
+  </span>
+</p>
+</td>
+</tr>
 
 
-      <tr >
+<tr >
 
-        <td  colspan=15 valign=top style='border-top:none;
-        border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;border-right:double windowtext 2.25pt;
-        background:white;padding:0cm 2.85pt 0cm 2.85pt'>
-        <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-          font-family:"Gill Sans MT",sans-serif;color:black'>FECHA DE ACTUALIZACIÓN</span></p>
-          <p class="MsoNormal" style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;text-autospace:none'><span style='font-size:12.0pt;line-height:115%;
-            font-family:"Gill Sans MT",sans-serif;color:black'></span></p>
-          </td>
-
-
-        </tr>
-      </table>
-
-    </div>
-
+  <td  colspan=15 class="normal-table-td exterior-top exterior-left exterior-right exterior-bottom">
+    <p class="MsoNormal p-content p-centrar">
+      <span style='s-content'>
+        FECHA DE ACTUALIZACIÓN
+      </span>
+    </p>
+    <p class="MsoNormal p-contetn p-centrar">
+      <span style='s-content'>
+        14/08/2017
+      </span>
+    </p>
+    
+  </td>
 
 
-  </body>
+</tr>
+</table>
 
-  </html>
+</div>
+
+
+
+</body>
+
+</html>

@@ -35,9 +35,9 @@
               <tr>
 
                   <th>Fundamento </th>
-                  <!--<th>Fracción </th>
+                  <th>Fracción </th>
                   <th>Ley</th>
--->
+
                   <th>Editar</th>
                   <th>Borrar</th>
                
@@ -65,12 +65,11 @@
 
                       <div class="form-group"> <label>Fundamento</label>
                         <textarea id="articulo" type="text" class="form-control" placeholder="Fundamento"></textarea> </div>
-                        <!--<div class="form-group"> <label>Fracción</label>
+                        <div class="form-group"> <label>Fracción</label>
                         <input id="fraccion" type="text" class="form-control" placeholder="fundamento"> </div>
                         <div class="form-group"> <label>Ley</label>
                         <input id="ley" type="text" class="form-control" placeholder="fundamento"> </div>
-                      -->
-
+                     
 
                 
                     </div>

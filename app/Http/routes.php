@@ -97,38 +97,44 @@ Route::get('/pdfTest2/{id}',function($id){
   $pdf = App::make('dompdf.wrapper');
 
   //$pdf->setOptions([ "defaultPaperSize" => "letter","defaultMediaType" => "full"]);
-
-$requisitos=$tramites->requisito()->get();
-
-//$requisitos_fisica= $requisitos->where('tipo','Personas Físicas');
-
-//$requisitos_morales
-
-
-
-
-  $pdf->setPaper('letter', 'portrait')->loadView('pdf', ['tramites' => $tramites,'rubros'=> $rubros,'requisito'=>'asd']);
+  $pdf->setPaper('letter', 'portrait')->loadView('pdf', ['tramites' => $tramites]);
   //$pdf->loadView('cedula_template');
 
+  if(!File::isDirectory('test'))
+    $result = File::makeDirectory('test');
 
-return $pdf->stream();
+return $pdf->save('myfile'.$id.'.pdf')->stream();
 
 });
-Route::get('/pdfTest/{id}',function($id){
 
-  $tramites = Tramite::findOrFail($id);
-  $rubros=Rubro::orderBy('id', 'asc')->get();
+Route::get('/pdfTest',function(){
+
+  ini_set('max_execution_time', 0);
+  ini_set('memory_limit','2000M');
+
+  $dependencias = Dependencia::get();
+  //$tramites = Tramite::findOrFail($id);
+
+  if(!File::isDirectory('cedulas'))
+    $result = File::makeDirectory('cedulas');
+
+foreach ($dependencias as $dependencia) {
 
 
-  $pdf = App::make('dompdf.wrapper');
 
-  //$pdf->setOptions([ "defaultPaperSize" => "letter","defaultMediaType" => "full"]);
+$val = iconv('UTF-8','Windows-1252',$dependencia->nombre);
+  if(!File::isDirectory('cedulas/'.$val))
+    $result = File::makeDirectory('cedulas/'.$val);
+}
+
+  //$pdf = App::make('dompdf.wrapper');
+
+  //$pdf->setPaper('letter', 'portrait')->loadView('cedula_template', ['tramites' => $tramites,'rubros'=> $rubros]);
 
 
-  $pdf->setPaper('letter', 'portrait')->loadView('cedula_template', ['tramites' => $tramites,'rubros'=> $rubros]);
-  //$pdf->loadView('cedula_template');
-
-return $pdf->stream();
+//$pdf = App::make('dompdf.wrapper');
+//$pdf->loadHTML('<h1>Test</h1>');
+//return $pdf->save('myfile.pdf')->stream();
 
 });
 

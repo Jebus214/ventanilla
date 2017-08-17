@@ -32,6 +32,8 @@
 
 <h3>{{$tramites->nombre}}</h3>
 
+<a class="btn btn-primary" href="/pdfTest2/{{$tramites->id}}">ver cedula</a>
+
 <div class="tab-content">
   <input type="hidden" id="_token" name="_token" value="{!! csrf_token() !!}">
 
