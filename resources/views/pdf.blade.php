@@ -76,10 +76,11 @@
 
 
   .p-content{
-   margin-top:3.0pt !important;;
-   margin-right:0cm !important;;
-   margin-bottom:3.0pt !important;;
-   margin-left:0.5cm !important;;
+   margin-top:3.0pt !important;
+   margin-right:0cm !important;
+   margin-bottom:3.0pt !important;
+   margin-left:0.5cm !important;
+    text-align: justify;
 
  }
  .p-title{
@@ -245,8 +246,8 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal
 
           <div class="placeholderclass">
 
-            <table class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 
-            style='border-collapse:collapse;border:none'>
+            <table  class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 width="100%"
+  style=';border-collapse:collapse;border:none'>
             <tr>
               <td  colspan=16 class="normal-table-td green exterior-top" >
                 <p class="MsoNormal p-title">
@@ -317,10 +318,12 @@ p.MsoNormal, li.MsoNormal, div.MsoNormal
               </tr>
               <tr style='height:66.9pt'>
                 <td  colspan=22 class="normal-table-td  exterior-left exterior-right" >
-                  <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;margin-left:0.5cm'>
-                    <span class="s-content">
-                      {{$tramites->descripcion}}
-                    </span></p>
+                                        
+          <p class="MsoNormal p-content">
+            <span class="s-content" >
+              {{$tramites->descripcion}}
+          </span>
+          </p>
                   </td>
                 </tr>
                 <tr style='height:31.85pt'>
@@ -954,9 +957,14 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
   </table>
 
 
+@if($tramites->id!=1)
+    <p class="MsoNormal">&nbsp;</p>
+@endif
 
-<p class="MsoNormal">&nbsp;</p>
+@if($tramites->id==2)
+   <div class="page-break"></div>
 
+@endif
 
   <table  class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 width="100%"
   style=';border-collapse:collapse;border:none'>
@@ -1880,8 +1888,9 @@ style='font-family:"Gill Sans MT",sans-serif'></span></p>
 <p class="MsoNormal">&nbsp;</p>
 
 
-
-
+@if($tramites->saltoPagina)
+<div class="page-break"></div>
+@endif
 
 <table  class="MsoNormal"Table border=1 cellspacing=0 cellpadding=0 width="100%"
 style=';border-collapse:collapse;border:none'>
@@ -1937,12 +1946,25 @@ border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;bord
 background:white;padding:0cm 2.85pt 0cm 2.85pt'>
 <p class="MsoNormal p-content p-centrar">
   <span style='s-content'>
-    <u>{{$tramites->revisa}}</u>
+   @if($tramites->revisa=='Martín Castañón Vargas (Encargado de Despacho)')
+<u>Martín Castañón Vargas</u>
+@else
+    <u>
+      {{$tramites->revisa}}
+    </u>
+ @endif  
   </span>
 </p>
 <p class="MsoNormal p-content p-centrar">
   <span style='s-content'>
-       {{$tramites->tituloRevisa}}
+@if($tramites->revisa=='Martín Castañón Vargas (Encargado de Despacho)')
+
+  Encargado de Despacho de la Unidad Municipal de
+Protección Civil y Bomberos 
+
+@else
+    {{$tramites->tituloRevisa}}
+ @endif    
   </span>
 </p>
 </td>
@@ -1951,13 +1973,27 @@ border-left:double windowtext 2.25pt;border-bottom:double windowtext 2.25pt;bord
 background:white;padding:0cm 2.85pt 0cm 2.85pt'>
 <p class="MsoNormal p-content p-centrar">
   <span style='s-content'>
-    <u>{{$tramites->autoriza}}
-    </u>
+
+@if($tramites->autoriza== 'Martín Castañón Vargas (Encargado de Despacho)')
+<u>Martín Castañón Vargas</u>
+@else
+   
+      <u>{{$tramites->autoriza}}</u>
+
+ @endif   
   </span>
 </p>
 <p class="MsoNormal p-content p-centrar">
   <span style='s-content'>
+    @if($tramites->autoriza=='Martín Castañón Vargas (Encargado de Despacho)')
+
+  Encargado de Despacho de la Unidad Municipal de
+Protección Civil y Bomberos 
+
+@else
     {{$tramites->tituloAutoriza}}
+ @endif   
+
   </span>
 </p>
 </td>

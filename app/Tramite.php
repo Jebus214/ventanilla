@@ -11,7 +11,7 @@ class Tramite extends Model
 
   // protected $appends = ['oficinaDepedencia','oficinaUnidad','oficinaOtros'];
 
-    protected $appends = ['tituloElabora','tituloAutoriza','tituloRevisa','formaDePago','oficinaDepedencia','oficinaUnidad','oficinaOtro','requisitosFisicas','requisitosMorales','requisitosInstituciones'];
+    protected $appends = ['saltoPagina','tituloElabora','tituloAutoriza','tituloRevisa','formaDePago','oficinaDepedencia','oficinaUnidad','oficinaOtro','requisitosFisicas','requisitosMorales','requisitosInstituciones'];
 
     public function rubro() {
         return $this->belongsTo(Rubro::class);
@@ -39,7 +39,7 @@ class Tramite extends Model
    }
 
    public function fundamento() {
-          return $this->hasMany(Fundamento::class);
+          return $this->hasMany(Fundamento::class)->orderBy('orden', 'asc');
      }
 
    public function requisito() {
@@ -128,7 +128,10 @@ class Tramite extends Model
                     return "Titular del ".$puestoString;
                 }
 
+                if (strpos($puestoString, 'Enlace') !== false) {
+                    return $puestoString;
 
+                }
 
         if (strpos($puestoString, 'Organo') !== false) {
             return "Titular del ".$puestoString;
@@ -143,7 +146,7 @@ class Tramite extends Model
 
         $puestoString= str_replace("Coordinación de","",$puestoString);
 
-            return "Coordinador o Coordinadora de ".$puestoString;
+            return "Coordinadora o Coordinador de ".$puestoString;
 
         }
 
@@ -159,6 +162,11 @@ class Tramite extends Model
 
   if (strpos($puestoString, 'Centro de Rehabilitación') !== false) {
       return "Titular del ".$puestoString;
+  }
+
+
+  if (strpos($puestoString, 'Subtesorería de Ingresos') !== false) {
+      return "Subtesorera o Subtesorero de  Ingresos";
   }
 
 
@@ -189,11 +197,11 @@ class Tramite extends Model
                 }
 
                 if (strpos($puestoString, 'Subtesorería de Ingresos') !== false) {
-                    return "Subtesorero o Subtesorera de  Ingresos ".$puestoString;
+                    return "Subtesorera o Subtesorero de  Ingresos";
                 }
 
                 if (strpos($puestoString, 'Secretaría del Ayuntamiento') !== false) {
-                    return "Secretario o Secretaria del Ayuntamiento ".$puestoString;
+                    return "Secretaria o Secretario del Ayuntamiento";
                 }
 
 
@@ -205,9 +213,30 @@ class Tramite extends Model
 
                 $puestoString= str_replace("Coordinación de","",$puestoString);
 
-                    return "Coordinador o Coordinadora de ".$puestoString;
+                    return "Coordinadora o Coordinador de ".$puestoString;
 
                 }
+
+
+                if (strpos($puestoString, 'Dirección General') !== false) {
+
+
+                  $puestoString= str_replace("Dirección General","",$puestoString);
+
+
+                    return "Directora o Director General ".$puestoString;
+                }
+
+
+                        if (strpos($puestoString, 'Comisaría') !== false) {
+
+
+                          $puestoString= str_replace("Comisaría General","",$puestoString);
+
+
+                            return "Comisario General ".$puestoString;
+                        }
+
 
 
 
@@ -227,6 +256,15 @@ class Tramite extends Model
 
      public function GetTituloAutorizaAttribute(){
         $puestoString=$this->puesto_autoriza;
+
+        if (strpos($puestoString, 'Comisaría') !== false) {
+
+
+          $puestoString= str_replace("Comisaría General","",$puestoString);
+
+
+            return "Comisario General ".$puestoString;
+        }
 
 
         if (strpos($puestoString, 'Dirección General') !== false) {
@@ -263,7 +301,14 @@ class Tramite extends Model
 
 
 
+                                if (strpos($puestoString, 'Secretaría del Ayuntamiento') !== false) {
+                                    return "Secretaria o Secretario del Ayuntamiento";
+                                }
 
+
+                                if (strpos($puestoString, 'Secretaría del Ayuntamiento') !== false) {
+                                    return "Secretaria o Secretario del Ayuntamiento";
+                                }
 
           return "Titular de la ".$puestoString;
 
@@ -271,6 +316,19 @@ class Tramite extends Model
 
 
 
+
+     }
+
+
+     public function GetSaltoPaginaAttribute(){
+$data=[2,14,79,82,102,157,23,33,34,152,17,29,45,66,81,112,134,139,140,141,199,25,30,67,77,84,116,125,130,166,38,126,52,144,162,167,172,22,8,15,32,148,19,54,86,159,10,55,57,122,90,168,197];
+$res=array_search($this->id,$data);
+
+
+if($res===false)
+  return false;
+else
+ return true;
 
      }
 

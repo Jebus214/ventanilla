@@ -78,6 +78,130 @@ Route::post('/api/add/tramite/{id}/fundamento/', 'Admin\TramiteAdminController@a
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+Route::get('/generarTotal',function(){
+
+  ini_set('max_execution_time', 0);
+  ini_set('memory_limit','2000M');
+
+
+  $dependencias = Dependencia::get();
+
+  if(!File::isDirectory('cedulas'))
+    $result = File::makeDirectory('cedulas');
+
+foreach ($dependencias as $dependencia) {
+
+$tramites = Tramite::where('dependencia_id',$dependencia->id)->where('dependencia_id','<>', '0')->get();
+
+$depFolder = iconv('UTF-8','Windows-1252',$dependencia->nombre);
+  if(!File::isDirectory('cedulas/'.$depFolder))
+    $result = File::makeDirectory('cedulas/'.$depFolder);
+
+
+foreach ($tramites as $tramite) {
+$val=$tramite->nombre;
+$pdf = App::make('dompdf.wrapper');
+$val=str_replace('/','',$val);
+$val=str_replace('"','',$val);
+$val=str_replace(':','',$val);
+$val=str_replace('.','',$val);
+
+
+
+if (strlen($val)>70 ) {
+$val=substr($val,0,70);
+}
+
+
+$val = iconv('UTF-8','Windows-1252',$val);
+
+
+
+  if(!File::isDirectory('cedulas/'.$depFolder)){
+  $result = File::makeDirectory('cedulas/'.$depFolder);
+  }
+
+  $pdf->setPaper('letter', 'portrait')->loadView('pdf', ['tramites' => $tramite]);
+
+  $pdf->save('cedulas/'.$depFolder.'/'.$val.'.pdf');
+
+}
+
+
+
+
+
+}
+
+
+
+return 'yeihh';
+
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+Route::get('/generar/{id}',function($id){
+
+  ini_set('max_execution_time', 0);
+  ini_set('memory_limit','2000M');
+
+
+  $dependencia = Dependencia::findOrFail($id);
+
+  if(!File::isDirectory('cedulas'))
+    $result = File::makeDirectory('cedulas');
+
+
+
+$tramites = Tramite::where('dependencia_id',$dependencia->id)->where('dependencia_id','<>', '0')->get();
+
+$depFolder = iconv('UTF-8','Windows-1252',$dependencia->nombre);
+  if(!File::isDirectory('cedulas/'.$depFolder))
+    $result = File::makeDirectory('cedulas/'.$depFolder);
+
+
+foreach ($tramites as $tramite) {
+
+  $val=$tramite->nombre;
+  $pdf = App::make('dompdf.wrapper');
+  $val=stripslashes($val);
+  $val=str_replace('/','',$val);
+  $val=str_replace('"','',$val);
+  $val=str_replace(':','',$val);
+  $val=str_replace('.','',$val);
+
+
+if (strlen($val)>70 ) {
+$val=substr($val,0,70);
+}
+
+
+$val = iconv('UTF-8','Windows-1252',$val);
+
+
+
+  if(!File::isDirectory('cedulas/'.$depFolder)){
+  $result = File::makeDirectory('cedulas/'.$depFolder);
+  }
+
+  $pdf->setPaper('letter', 'portrait')->loadView('pdf', ['tramites' => $tramite]);
+
+  $pdf->save('cedulas/'.$depFolder.'/'.$val.'.pdf');
+
+}
+
+
+
+
+
+
+
+
+return 'yeihh';
+
+});
+
 Route::get('/template',function(){
 
 
@@ -91,7 +215,6 @@ Route::get('/pdfTest2/{id}',function($id){
   ini_set('memory_limit','1000M');
 
   $tramites = Tramite::findOrFail($id);
-  $rubros=Rubro::orderBy('id', 'asc')->get();
 
 
   $pdf = App::make('dompdf.wrapper');
